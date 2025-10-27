@@ -11,7 +11,7 @@
 </head>
 <style>
     :root {
-        --primary-color: #c2be8e; --secondary-color: #acc28e; --accent-color: #c2a48e;
+        --primary-color: #565543; --secondary-color: #4e5643; --accent-color: #564c43;
         --heading-font: 'Poppins', sans-serif; --body-font: 'Inter', sans-serif;
     }
     * { box-sizing: border-box; }
@@ -24,7 +24,7 @@
     .price .original { font-size: 1rem; text-decoration: line-through; color: #999; margin-right: 10px; }
     .price .discount { font-size: 2rem; font-weight: bold; color: var(--primary-color); }
     .product-description { line-height: 1.7; margin: 20px 0; font-size: 0.95rem; }
-    .cta-button { display: inline-block; width: 100%; text-align: center; padding: 15px; background-color: var(--accent-color); color: #000000; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1.1rem; transition: all 0.2s; }
+    .cta-button { display: inline-block; width: 100%; text-align: center; padding: 15px; background-color: var(--accent-color); color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1.1rem; transition: all 0.2s; }
     .cta-button:hover { filter: brightness(1.1); }
     .section { padding: 30px 20px; }
     .section-title { font-family: var(--heading-font); font-size: 1.5rem; text-align: center; margin-bottom: 25px; color: var(--primary-color); }
@@ -46,7 +46,7 @@
     .variant-label { font-weight: bold; margin-bottom: 10px; }
     .variant-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
     .variant-btn { padding: 8px 16px; border: 1px solid #ccc; background-color: #fff; cursor: pointer; border-radius: 4px; transition: all 0.2s; }
-    .variant-btn.active { border-color: var(--accent-color); background-color: var(--accent-color); color: #000000; }
+    .variant-btn.active { border-color: var(--accent-color); background-color: var(--accent-color); color: #ffffff; }
     .key-features { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 30px; }
     .key-features-title { font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 15px; font-size: 1.2rem; }
     .key-features-list { list-style: none; padding: 0; margin: 0; }
@@ -87,6 +87,18 @@
         <div class="product-carousel-slide" style="transform: translateX(500%);">
             <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztn-mey1nkdwrgg1cc.webp" alt="Loco Polo Cartiera gallery image" />
         </div>
+    
+        <div class="product-carousel-slide" style="transform: translateX(600%);">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztf-mf94liy720w95b@resize_w450_nl.webp" alt="Loco Polo Cartiera -   Black" />
+        </div>
+    
+        <div class="product-carousel-slide" style="transform: translateX(700%);">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztj-mf94liy6z7rd42@resize_w450_nl.webp" alt="Loco Polo Cartiera - Cream" />
+        </div>
+    
+        <div class="product-carousel-slide" style="transform: translateX(800%);">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztq-mf94liy74u1524@resize_w450_nl.webp" alt="Loco Polo Cartiera - Grey" />
+        </div>
     </div>
             <button class="carousel-btn prev">&#10094;</button>
             <button class="carousel-btn next">&#10095;</button>
@@ -116,6 +128,18 @@
         <div class="product-carousel-thumbnail " data-slide="5">
             <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztn-mey1nkdwrgg1cc.webp" alt="Thumbnail 6" />
         </div>
+    
+        <div class="product-carousel-thumbnail " data-slide="6">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztf-mf94liy720w95b@resize_w450_nl.webp" alt="Thumbnail 7" />
+        </div>
+    
+        <div class="product-carousel-thumbnail " data-slide="7">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztj-mf94liy6z7rd42@resize_w450_nl.webp" alt="Thumbnail 8" />
+        </div>
+    
+        <div class="product-carousel-thumbnail " data-slide="8">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-81ztq-mf94liy74u1524@resize_w450_nl.webp" alt="Thumbnail 9" />
+        </div>
     </div>
             </div>
             <div class="product-details">
@@ -130,7 +154,11 @@
             <p class="variant-label">Pilih Varian:</p>
             <div class="variant-buttons">
             
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-81ztc-mey1nkdwonb552.webp">Default</button>
+                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-81ztf-mf94liy720w95b@resize_w450_nl.webp">  Black</button>
+            
+                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-81ztj-mf94liy6z7rd42@resize_w450_nl.webp">Cream</button>
+            
+                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-81ztq-mf94liy74u1524@resize_w450_nl.webp">Grey</button>
             
             </div>
         </div>
@@ -247,7 +275,7 @@
         const slides = document.querySelectorAll('.product-carousel-slide');
         const thumbnails = document.querySelectorAll('.product-carousel-thumbnail');
         const variantBtns = document.querySelectorAll('.variant-btn');
-        const allImagesSrc = ["https://down-id.img.susercontent.com/file/id-11134207-81ztc-mey1nkdwonb552.webp","https://down-id.img.susercontent.com/file/id-11134207-7ra0r-mbmr2np8l3tfca.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztq-me2s9fpsbjlv2d.webp","https://down-id.img.susercontent.com/file/id-11134207-81zth-mey1nkdwn8qpd6.webp","https://down-id.img.susercontent.com/file/id-11134207-7rasc-m29p19x2m6kge3.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztn-mey1nkdwrgg1cc.webp"];
+        const allImagesSrc = ["https://down-id.img.susercontent.com/file/id-11134207-81ztc-mey1nkdwonb552.webp","https://down-id.img.susercontent.com/file/id-11134207-7ra0r-mbmr2np8l3tfca.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztq-me2s9fpsbjlv2d.webp","https://down-id.img.susercontent.com/file/id-11134207-81zth-mey1nkdwn8qpd6.webp","https://down-id.img.susercontent.com/file/id-11134207-7rasc-m29p19x2m6kge3.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztn-mey1nkdwrgg1cc.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztf-mf94liy720w95b@resize_w450_nl.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztj-mf94liy6z7rd42@resize_w450_nl.webp","https://down-id.img.susercontent.com/file/id-11134207-81ztq-mf94liy74u1524@resize_w450_nl.webp"];
         let currentSlide = 0;
 
         function goToSlide(n) {
