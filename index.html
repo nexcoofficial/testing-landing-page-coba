@@ -5,593 +5,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Kerudung Sekolah Instan Morgan Exclusive - ayunda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+    <title> Kerudung Sekolah Instan Morgan Exclusive - https://cdn.orderonline.id/uploads/images_7520641753639169702.png</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <style>
-    :root {
-        --primary-color: #4067b5; --secondary-color: #b54067; --accent-color: #67b540;
-        --accent-contrast-color: #000000;
-        --heading-font: 'Lato', sans-serif; --body-font: 'Source Sans Pro', sans-serif;
+     :root {
+        --primary-color: #f556bb; --secondary-color: #f5566b; --accent-color: #df56f5;
+        --heading-font: 'Poppins', sans-serif; --body-font: 'Inter', sans-serif;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--body-font); background-color: #f5f5f5; color: #333; }
+    body { margin: 0; font-family: var(--body-font); background-color: #f5f5f5; }
     img { max-width: 100%; height: auto; display: block; }
-    .container { max-width: 1200px; margin: 20px auto; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-    .product-section { padding: 20px; display: grid; grid-template-columns: 1fr; gap: 30px; }
-    .product-title { font-family: var(--heading-font); font-size: 1.8rem; line-height: 1.3; margin: 0 0 15px 0; color: #222; }
-    .price-box { background-color: #fafafa; padding: 15px; margin: 15px 0; border-radius: 4px; }
-    .price .original { font-size: 1rem; text-decoration: line-through; color: #999; margin-right: 10px; }
-    .price .discount { font-size: 2rem; font-weight: bold; color: var(--primary-color); }
-    .product-description { line-height: 1.7; margin: 20px 0; font-size: 0.95rem; white-space: pre-wrap; }
-    .cta-button { display: inline-block; width: 100%; text-align: center; padding: 15px; background-color: var(--accent-color); color: var(--accent-contrast-color); text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1.1rem; transition: all 0.2s; border: none; cursor: pointer; }
-    .cta-button:hover { filter: brightness(1.1); transform: scale(1.02); }
-    .section { padding: 30px 20px; }
-    .section-title { font-family: var(--heading-font); font-size: 1.5rem; text-align: center; margin-bottom: 25px; color: var(--primary-color); }
-    
-    .product-carousel-container { position: relative; overflow: hidden; border-radius: 12px; background-color: #eee; }
-    .product-carousel-main { display: flex; transition: transform 0.5s ease-in-out; }
-    .product-carousel-slide { min-width: 100%; box-sizing: border-box; aspect-ratio: 1/1; }
-    .product-carousel-slide img, .product-carousel-slide iframe, .product-carousel-slide video { width: 100%; height: 100%; display: block; object-fit: cover; border: none; }
-    .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255,255,255,0.7); border: none; color: #333; font-size: 24px; padding: 10px 15px; cursor: pointer; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 10; }
-    .carousel-btn:hover { background-color: white; }
-    .carousel-btn.prev { left: 10px; }
-    .carousel-btn.next { right: 10px; }
-    .product-carousel-thumbnails { display: flex; gap: 10px; margin-top: 15px; overflow-x: auto; padding-bottom: 5px; }
-    .product-carousel-thumbnail { cursor: pointer; border: 2px solid transparent; border-radius: 8px; overflow: hidden; flex-shrink: 0; transition: border-color 0.2s; position: relative; }
-    .product-carousel-thumbnail img { width: 70px; height: 70px; object-fit: cover; display: block; }
-    .product-carousel-thumbnail.active { border-color: var(--accent-color); }
-    .product-carousel-thumbnail .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.5); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: opacity 0.2s; }
-    .product-carousel-thumbnail:not(.active) .play-icon { opacity: 0.7; }
+    .shopee-container { max-width: 1200px; margin: 0 auto; background-color: #fff; padding: 15px; }
+    .product-layout { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .product-gallery .main-image { width: 100%; border-radius: 4px; border: 1px solid #eee; }
+    .product-title { font-family: var(--heading-font); font-size: 1.5rem; line-height: 1.3; margin: 0 0 10px 0; color: #333; }
+    .price-box { background-color: #fafafa; padding: 15px; margin: 15px 0; }
+    .price { font-size: 1.7rem; font-weight: bold; color: var(--primary-color); }
+    .price .original { font-size: 1rem; text-decoration: line-through; color: #999; margin-left: 10px; }
+    .details-row { display: flex; margin-bottom: 15px; font-size: 0.9rem; }
+    .details-row label { color: #757575; width: 100px; flex-shrink: 0; }
+    .cta-section { margin-top: 20px; }
+    .cta-button { display: inline-block; padding: 14px 28px; background-color: var(--accent-color); color: #000000; border: none; font-size: 1rem; border-radius: 4px; cursor: pointer; text-decoration: none; }
+    #order { padding-top: 30px; }
 
-    .variant-selector { margin-top: 20px; }
-    .variant-label { font-weight: bold; margin-bottom: 10px; font-size: 1rem; color: #555; }
-    .variant-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
-    .variant-btn { padding: 8px 16px; border: 1px solid #ccc; background-color: #fff; cursor: pointer; border-radius: 20px; transition: all 0.2s; font-family: var(--body-font); font-size: 0.9rem; }
-    .variant-btn.active { border-color: var(--accent-color); background-color: var(--accent-color); color: var(--accent-contrast-color); font-weight: bold; }
-
-    .key-features { background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 30px; }
-    .key-features-title { font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 15px; font-size: 1.2rem; }
-    .key-features-list { list-style: none; padding: 0; margin: 0; }
-    .key-features-list li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
-    .check-icon { width: 20px; height: 20px; color: var(--accent-color); flex-shrink: 0; margin-top: 2px; }
-
-    .product-gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
-    .gallery-item img { width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; }
-
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .testimonial-card { background-color: #f8f9fa; padding: 20px; border-radius: 12px; border: 1px solid #eee; }
-    .testimonial-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-    .avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
-    .customer-name { font-weight: bold; color: var(--primary-color); }
-    .stars { display: flex; }
-    .star { width: 18px; height: 18px; fill: #ccc; }
-    .star.filled { fill: #ffc107; }
-    .testimonial-text { font-style: italic; color: #555; margin-bottom: 15px; }
-    .review-media { width: 100%; max-width: 150px; border-radius: 8px; margin-top: 10px; }
-
-    @media (min-width: 768px) {
-        .product-section { grid-template-columns: 450px 1fr; gap: 40px; padding: 30px; }
-        .product-title { font-size: 2rem; }
+    @media (min-width: 768px) { 
+        .shopee-container { padding: 20px; margin: 20px auto; }
+        .product-layout { grid-template-columns: 450px 1fr; } 
+        .product-details { padding-left: 20px; }
+        .product-title { font-size: 1.8rem; }
+        .price { font-size: 2rem; }
+        .cta-button { padding: 15px 30px; font-size: 1.1rem; }
     }
 </style>
 <body>
-    <div class="container">
-        <main class="product-section">
-            <div class="product-gallery-main">
-                
-        <div class="product-carousel-container">
-            <div class="product-carousel-main">
-        <div class="product-carousel-slide">
-            <video controls preload="metadata" poster="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-maw9bai2cexee0.webp" style="width:100%; height:100%; object-fit:contain; background-color:#000;"><source src="https://down-tx-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ke1j-lqyh46vnhabhd3.16005581735066734.mp4"></video>
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-maw9bai2cexee0.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-maw9bai2dthuc9.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkb-maw9bai2b0cyed.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bisn1u0b.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bir8he70.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78biu1ma9d.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Putih " loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqem78biwur68a@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Hitam" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78biy9bmd7@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Navy" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98z-lqem78biznw21f@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Grey" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78bj12gib0@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Merah" loading="lazy" />
-        </div>
-    
-        <div class="product-carousel-slide">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lqem78bj2h0y39@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Coklat" loading="lazy" />
-        </div>
-    </div>
-            <button class="carousel-btn prev" aria-label="Previous image">&#10094;</button><button class="carousel-btn next" aria-label="Next image">&#10095;</button>
-        </div>
-    
-                <div class="product-carousel-thumbnails">
-        <div class="product-carousel-thumbnail active" data-slide="0">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-maw9bai2cexee0.webp" alt="Thumbnail 1" loading="lazy" />
-            <div class="play-icon">&#9658;</div>
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="1">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-maw9bai2cexee0.webp" alt="Thumbnail 2" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="2">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-maw9bai2dthuc9.webp" alt="Thumbnail 3" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="3">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkb-maw9bai2b0cyed.webp" alt="Thumbnail 4" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="4">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bisn1u0b.webp" alt="Thumbnail 5" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="5">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bir8he70.webp" alt="Thumbnail 6" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="6">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78biu1ma9d.webp" alt="Thumbnail 7" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="7">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp" alt="Thumbnail 8" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="8">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqem78biwur68a@resize_w450_nl.webp" alt="Thumbnail 9" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="9">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78biy9bmd7@resize_w450_nl.webp" alt="Thumbnail 10" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="10">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98z-lqem78biznw21f@resize_w450_nl.webp" alt="Thumbnail 11" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="11">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78bj12gib0@resize_w450_nl.webp" alt="Thumbnail 12" loading="lazy" />
-            
-        </div>
-    
-        <div class="product-carousel-thumbnail " data-slide="12">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lqem78bj2h0y39@resize_w450_nl.webp" alt="Thumbnail 13" loading="lazy" />
-            
-        </div>
-    </div>
+    <div class="shopee-container">
+        <div class="product-layout">
+            <div class="product-gallery">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-maw9bai2dthuc9.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive" class="main-image">
             </div>
             <div class="product-details">
                 <h1 class="product-title"> Kerudung Sekolah Instan Morgan Exclusive</h1>
                 <div class="price-box">
-                    <div class="price">
-                        <span class="original">Rp 500.000</span> <span class="discount">Rp 180.000</span>
-                    </div>
+                    <span class="price">Rp 189.000</span>
+                    <span class="original">Rp 150.000</span>
                 </div>
-                
-        <div class="variant-selector">
-            <p class="variant-label">Pilih Varian:</p>
-            <div class="variant-buttons">
-            
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp">Putih </button>
-            
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqem78biwur68a@resize_w450_nl.webp">Hitam</button>
-            
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78biy9bmd7@resize_w450_nl.webp">Navy</button>
-            
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-7r98z-lqem78biznw21f@resize_w450_nl.webp">Grey</button>
-            
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78bj12gib0@resize_w450_nl.webp">Merah</button>
-            
-                <button class="variant-btn" data-image-src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lqem78bj2h0y39@resize_w450_nl.webp">Coklat</button>
-            
+                <div class="details-row"><label>Description:</label> <span>Kerudung Sekolah Instan Morgan Exclusive
+
+
+
+Pola kerudung segitiga dengan konsep baru yang membentuk siluet "V" yang dibuat lebih kecil dari ukuran biasanya, sehingga memberikan look lebih fresh. Detail tali serut khas rabbani dengan sentuhan baru yang dibuat dari bahan kerudung yang sama, yang dapat di (adjust) sesuai selera.
+
+</span></div>
+                <div class="cta-section">
+                    <a href="#order" class="cta-button">Pesan Sekarang</a>
+                </div>
             </div>
         </div>
-    
-                <div class="product-description">Kerudung Sekolah Instan Morgan Exclusive<br><br>Pola kerudung segitiga dengan konsep baru yang membentuk siluet "V" yang dibuat lebih kecil dari ukuran biasanya, sehingga memberikan look lebih fresh. Detail tali serut khas rabbani dengan sentuhan baru yang dibuat dari bahan kerudung yang sama, yang dapat di (adjust) sesuai selera.</div>
-                <a href="#order" class="cta-button">Pesan Sekarang</a>
-                
-        <div class="key-features">
-            <h3 class="key-features-title">Kenapa Harus Beli Disini?</h3>
-            <ul class="key-features-list">
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Detail Size :</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Size S : P.Depan = 57,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>            P.Belakang = 69,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Size M : P.Depan = 67,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>             P.Belakang = 79,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Size L : P.Depan = 77,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>            P.Belakang = 89,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Size XL : P.Depan = 84,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>              P.Belakang = 96,5cm</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Detail Unik:</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Kerudung bisa di gunakan untuk sekolah dan di gunakan sehari-hari</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Bisa digunakan oleh anak dan dewasa</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Kerudung Instan</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Kerudung Anti Tembem</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Detail Produk:</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Mempunyai logo Rabbani</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Menggunakan pita serut</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Mempunyai pad yang mudah dibentuk</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Detail Bahan:</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Bahan PE</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>- Kualitas jahitan terbaik</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>*Warna pada gambar tidak 100% sama dengan warna sebenarnya yaa Rabbaners. Hal ini dipengaruhi oleh faktor cahaya pada saat pengambilan gambar atau jenis gadget yang kamu gunakan.</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Pengiriman </span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Senin - Sabtu : 15.00 WIB</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Minggu : Tidak ada pengiriman</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>-------------------------------------------</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>Mengenai  stock, semua yang ada di etalase ready.</span>
-                </li>
-            
-                <li>
-                    <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
-                    <span>-------------------------------------------</span>
-                </li>
-            
-            </ul>
-        </div>
-    
-            </div>
-        </main>
-        
-        <section class="section product-gallery-section">
-            <h2 class="section-title">Galeri Produk</h2>
-            <div class="product-gallery-grid">
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-maw9bai2cexee0.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-maw9bai2dthuc9.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkb-maw9bai2b0cyed.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bisn1u0b.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bir8he70.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78biu1ma9d.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive gallery image" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Putih " loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqem78biwur68a@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Hitam" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78biy9bmd7@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Navy" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98z-lqem78biznw21f@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Grey" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78bj12gib0@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Merah" loading="lazy"/>
-                    </div>
-                
-                    <div class="gallery-item">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lqem78bj2h0y39@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive - Coklat" loading="lazy"/>
-                    </div>
-                
-            </div>
-        </section>
-    
-        
-        <section class="section testimonials-section">
-            <h2 class="section-title">Ulasan Pelanggan</h2>
-            <div class="testimonials-grid">
-                
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://i.pinimg.com/736x/0c/29/32/0c2932e0e226da87256b40ffbeaed302.jpg" alt="amel " class="avatar"/>
-                            <div class="customer-info">
-                                <p class="customer-name">amel </p>
-                                <div class="stars"><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Produknya bagus banget!"</p>
-                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasm-m20wn7pjjge71f.webp" alt="Review media" class="review-media"/>
-                    </div>
-                
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://i.pinimg.com/736x/85/a3/64/85a364903e1a59cfedd68e1dc32f202b.jpg" alt="uti" class="avatar"/>
-                            <div class="customer-info">
-                                <p class="customer-name">uti</p>
-                                <div class="stars"><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"Sangat memuaskan."</p>
-                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasg-m0wo0aettqxc7c.webp" alt="Review media" class="review-media"/>
-                    </div>
-                
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://i.pinimg.com/736x/04/03/c1/0403c15bbb473a3eb0e98fff4b88e0e2.jpg" alt="riska" class="avatar"/>
-                            <div class="customer-info">
-                                <p class="customer-name">riska</p>
-                                <div class="stars"><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"rekomen nex beli lagi"</p>
-                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasa-m26o2psbpeir46.webp" alt="Review media" class="review-media"/>
-                    </div>
-                
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <img src="https://i.pinimg.com/736x/ca/07/09/ca07097de9245bcbdd52686cd1ad932e.jpg" alt="gavy " class="avatar"/>
-                            <div class="customer-info">
-                                <p class="customer-name">gavy </p>
-                                <div class="stars"><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
-                            </div>
-                        </div>
-                        <p class="testimonial-text">"bagus banget makasih seller"</p>
-                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasb-m38znubcytwjf9.webp" alt="Review media" class="review-media"/>
-                    </div>
-                
-            </div>
-        </section>
-    
-        <section id="order" class="section">
-             <h2 class="section-title">Form Pemesanan</h2>
-            <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="hijab-flow-alana-segi-tiga" data-product-id="68dcee051430744f5a087e02" id="oo-embed-form-hijab-flow-alana-segi-tiga-1624" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '68dcee051430744f5a087e02', '68dcee051430744f5a087e03', 'oo-embed-form-hijab-flow-alana-segi-tiga-1624', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
-        </section>
+        <section id="order"><!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="hijab-flow-alana-segi-tiga" data-product-id="68dcee051430744f5a087e02" id="oo-embed-form-hijab-flow-alana-segi-tiga-671" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '68dcee051430744f5a087e02', '68dcee051430744f5a087e03', 'oo-embed-form-hijab-flow-alana-segi-tiga-671', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></section>
     </div>
-    <script>
-        const carouselMain = document.querySelector('.product-carousel-main');
-        const slides = document.querySelectorAll('.product-carousel-slide');
-        const thumbnails = document.querySelectorAll('.product-carousel-thumbnail');
-        const variantBtns = document.querySelectorAll('.variant-btn');
-        const allSources = [{"type":"video","src":"https://down-tx-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ke1j-lqyh46vnhabhd3.16005581735066734.mp4"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7rbk0-maw9bai2cexee0.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7rbka-maw9bai2dthuc9.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7rbkb-maw9bai2b0cyed.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bisn1u0b.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r992-lqem78bir8he70.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78biu1ma9d.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r98x-lqem78biwur68a@resize_w450_nl.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78biy9bmd7@resize_w450_nl.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r98z-lqem78biznw21f@resize_w450_nl.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r991-lqem78bj12gib0@resize_w450_nl.webp"},{"type":"image","src":"https://down-id.img.susercontent.com/file/id-11134207-7r98t-lqem78bj2h0y39@resize_w450_nl.webp"}];
-        let currentSlide = 0;
-
-        function goToSlide(n) {
-            if (!carouselMain || n < 0 || n >= slides.length) return;
-            
-            // UX Improvement: Stop any playing videos when changing slide
-            const currentSlideEl = slides[currentSlide];
-            const videoEl = currentSlideEl ? currentSlideEl.querySelector('video, iframe') : null;
-            if (videoEl) {
-                if (videoEl.tagName === 'VIDEO') {
-                    videoEl.pause();
-                } else if (videoEl.tagName === 'IFRAME' && videoEl.contentWindow) {
-                    videoEl.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                }
-            }
-
-            carouselMain.style.transform = `translateX(-${n * 100}%)`;
-            currentSlide = n;
-            updateThumbnails();
-            updateVariantButtons();
-        }
-
-        function updateThumbnails() {
-            thumbnails.forEach((thumb, index) => {
-                thumb.classList.toggle('active', index === currentSlide);
-            });
-        }
-        
-        // REVAMPED: Clearer logic for updating variant buttons
-        function updateVariantButtons() {
-            if (!variantBtns || variantBtns.length === 0) return;
-
-            const currentSource = allSources[currentSlide];
-            
-            variantBtns.forEach(btn => btn.classList.remove('active'));
-
-            if (currentSource && currentSource.type === 'image') {
-                const currentImageSrc = currentSource.src;
-                variantBtns.forEach(btn => {
-                    if (btn.dataset.imageSrc === currentImageSrc) {
-                        btn.classList.add('active');
-                    }
-                });
-            }
-        }
-
-        document.querySelector('.carousel-btn.next')?.addEventListener('click', () => {
-            goToSlide(currentSlide >= slides.length - 1 ? 0 : currentSlide + 1);
-        });
-
-        document.querySelector('.carousel-btn.prev')?.addEventListener('click', () => {
-            goToSlide(currentSlide <= 0 ? slides.length - 1 : currentSlide - 1);
-        });
-
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                goToSlide(parseInt(thumb.dataset.slide));
-            });
-        });
-
-        variantBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const targetImage = btn.dataset.imageSrc;
-                if (!targetImage) return;
-                const imageIndex = allSources.findIndex(s => s.type === 'image' && s.src === targetImage);
-                if (imageIndex !== -1) {
-                    goToSlide(imageIndex);
-                }
-            });
-        });
-        
-        let touchstartX = 0; let touchendX = 0;
-        function handleGesture() {
-            if (slides.length <= 1) return;
-            if (touchendX < touchstartX - 50) document.querySelector('.carousel-btn.next')?.click(); // Swipe left
-            if (touchendX > touchstartX + 50) document.querySelector('.carousel-btn.prev')?.click(); // Swipe right
-        }
-        carouselMain?.addEventListener('touchstart', e => { touchstartX = e.changedTouches[0].screenX; }, { passive: true });
-        carouselMain?.addEventListener('touchend', e => { touchendX = e.changedTouches[0].screenX; handleGesture(); });
-
-        goToSlide(0);
-    </script>
     
     <script>
-        // Shared JS can be added here if needed in the future
+        
+        const mainProductImage = document.getElementById('mainProductImage');
+        const variantButtons = document.querySelectorAll('.variant-btn');
+
+        function selectVariant(selectedButton, imageUrl) {
+            if (mainProductImage && imageUrl) {
+                mainProductImage.src = imageUrl;
+            }
+            variantButtons.forEach(btn => btn.classList.remove('active'));
+            selectedButton.classList.add('active');
+        }
+
+        // Set initial image from the first variant if available
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialImageUrl = "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp";
+            if (mainProductImage && initialImageUrl) {
+                mainProductImage.src = initialImageUrl;
+            }
+        });
+        
+
+        
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        function openLightbox(src) {
+            if(lightbox) {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = src;
+            }
+        }
+        function closeLightbox() {
+            if(lightbox) lightbox.style.display = 'none';
+        }
+        
+
+        
+        const socialProofData = {
+            names: "Sari, Dewi, Maya, Putri, Rina, Indira, Kartika, Lestari, Permata, Vina, Dina, Anisa, Fitri, Novi, Ratna".split(',').map(s => s.trim()),
+            cities: "Jakarta, Surabaya, Bandung, Medan, Bekasi, Tangerang, Depok, Semarang, Palembang, Makassar, Yogyakarta, Malang, Bogor, Batam, Denpasar".split(',').map(s => s.trim()),
+            productName: " Kerudung Sekolah Instan Morgan Exclusive",
+            interval: 8000,
+            duration: 5000
+        };
+        const popup = document.getElementById('social-proof-popup');
+        if (popup) {
+            const textEl = document.getElementById('social-proof-text');
+            const timeEl = document.getElementById('social-proof-time');
+            let proofTimeout, proofInterval;
+            
+            function showSocialProof() {
+                const randomName = socialProofData.names[Math.floor(Math.random() * socialProofData.names.length)];
+                const randomCity = socialProofData.cities[Math.floor(Math.random() * socialProofData.cities.length)];
+                if(textEl) textEl.textContent = `${randomName} from ${randomCity} just purchased ${socialProofData.productName}`;
+                if(timeEl) timeEl.textContent = `${Math.floor(Math.random() * 15) + 1} minutes ago`;
+
+                popup.classList.add('show');
+                clearTimeout(proofTimeout);
+                proofTimeout = setTimeout(() => {
+                    popup.classList.remove('show');
+                }, socialProofData.duration);
+            }
+            window.closeSocialProof = function() {
+                clearTimeout(proofTimeout);
+                clearInterval(proofInterval);
+                popup.classList.remove('show');
+            }
+            
+            setTimeout(() => {
+                showSocialProof();
+                proofInterval = setInterval(showSocialProof, socialProofData.interval);
+            }, 3000);
+        }
+        
     </script>
 
 </body>
