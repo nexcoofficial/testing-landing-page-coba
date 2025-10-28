@@ -13,30 +13,63 @@
     :root {
         --primary-color: #6fb540; --secondary-color: #40b54c; --accent-color: #a9b540;
         --heading-font: 'Poppins', sans-serif; --body-font: 'Inter', sans-serif;
+        --text-color: #333; --bg-color: #ffffff; --light-bg-color: #f8f9fa;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--body-font); background-color: #000; color: #fff; }
+    body { margin: 0; font-family: var(--body-font); color: var(--text-color); line-height: 1.7; background-color: var(--bg-color); }
     h1, h2, h3, h4, h5, h6 { font-family: var(--heading-font); }
     img { max-width: 100%; height: auto; display: block; }
-    .tiktok-container { max-width: 450px; margin: auto; background-color: #121212; min-height: 100vh; position: relative; padding-bottom: 100px; /* Space for sticky footer */ }
-    .product-info { padding: 15px; }
-    .price { font-size: 1.8rem; font-weight: bold; color: var(--accent-color); margin-bottom: 10px; }
-    .product-title { font-size: 1.2rem; margin: 0; line-height: 1.4; }
-    .variant-section { margin: 15px 0; }
-    .variant-title { color: #aaa; font-size: 0.9rem; margin-bottom: 8px; }
-    .variant-selector { display: flex; flex-wrap: wrap; gap: 8px; }
-    .variant-btn { padding: 5px 15px; border: 1px solid #555; border-radius: 4px; background-color: #333; color: #fff; cursor: pointer; font-family: var(--body-font); }
-    .variant-btn.active { border-color: var(--accent-color); background-color: var(--accent-color); color: #000000; }
-    .store-info-section { margin-top: 15px; padding-top: 15px; border-top: 1px solid #333; }
-    .store-info-container { justify-content: flex-start; }
-    .store-logo { height: 40px; border-radius: 50%; width: 40px; object-fit: cover; }
-    .store-name { font-weight: bold; color: #fff;}
-    .verified-badge { width: 18px; height: 18px; }
-    .sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; max-width: 450px; margin: auto; background-color: #222; padding: 15px; text-align: center; border-top: 1px solid #444; z-index: 100; }
-    .cta-button { width: 100%; background-color: var(--accent-color); color: #000000; border: none; padding: 15px; font-size: 1.2rem; font-weight: bold; border-radius: 4px; cursor: pointer; font-family: var(--heading-font); }
-    .description { font-size: 0.9rem; color: #ccc; margin-top: 15px; line-height: 1.6; white-space: pre-wrap; }
-    .size-details-section h2 { font-size: 1rem; color: #ddd; margin-bottom: 10px; }
-    .size-details-section pre { white-space: pre-wrap; font-family: var(--body-font); font-size: 0.9rem; background-color: #222; padding: 10px; border-radius: 4px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 60px 0; }
+    .section-title { font-size: 2.2rem; text-align: center; color: var(--primary-color); margin-bottom: 40px; }
+    .btn { display: inline-block; padding: 15px 35px; background-color: var(--accent-color); color: #000000; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); filter: brightness(1.1); }
+    .hero {
+        background-color: var(--primary-color);
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://down-id.img.susercontent.com/file/id-11134207-7rbka-maw9bai2dthuc9.webp);
+        background-size: cover; background-position: center; color: #000000;
+        padding: 100px 0; text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; margin: 0 0 20px 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+    .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px auto; opacity: 0.9; }
+    .product-info-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    .product-info-grid .main-image { border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+    .product-info-content h2 { font-size: 2rem; color: var(--primary-color); }
+    .price { margin: 25px 0; }
+    .price .original { text-decoration: line-through; opacity: 0.7; font-size: 1.1rem; margin-right: 15px; }
+    .price .discount { font-size: 2.2rem; font-weight: bold; color: var(--primary-color); }
+    .variant-section { margin-top: 20px; }
+    .variant-title { font-weight: bold; color: var(--text-color); margin-bottom: 10px; }
+    .variant-selector { display: flex; flex-wrap: wrap; gap: 10px; }
+    .variant-btn { padding: 8px 20px; border: 2px solid #ddd; border-radius: 50px; background-color: #fff; cursor: pointer; transition: all 0.2s ease; font-weight: 500; font-family: var(--body-font); }
+    .variant-btn.active { border-color: var(--primary-color); background-color: var(--primary-color); color: #000000; font-weight: bold; }
+    .variant-btn:hover:not(.active) { border-color: var(--secondary-color); }
+    .features-list { list-style-type: '✔'; padding-left: 20px; display: grid; grid-template-columns: 1fr; gap: 10px;}
+    .features-list li { padding-left: 15px; font-size: 1.1rem; }
+    .specs-box { background: var(--light-bg-color); padding: 20px; border-radius: 12px; border: 1px solid #eee; }
+    .specs-box pre { white-space: pre-wrap; font-family: var(--body-font); margin: 0; line-height: 1.8; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .gallery-grid img:hover { transform: scale(1.05); }
+    .testimonial-section { background-color: var(--light-bg-color); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .testimonial-card { background: #fff; padding: 25px; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.07); }
+    .testimonial-header { display: flex; align-items: center; margin-bottom: 15px; }
+    .testimonial-avatar { width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; object-fit: cover; border: 3px solid var(--secondary-color); }
+    .testimonial-name { font-weight: bold; font-size: 1.1rem; } .testimonial-rating { color: #ffc107; font-size: 1.1rem; }
+    .testimonial-text { font-style: italic; color: #555; }
+    .testimonial-media { width: 100%; border-radius: 12px; margin-top: 15px; cursor: pointer; }
+    .order-container { max-width: 700px; margin: auto; background: var(--light-bg-color); padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .footer { background-color: var(--primary-color); color: #000000; text-align: center; padding: 40px 0; }
+    .footer .store-name { color: #000000; }
+    .footer p { margin-top: 10px; opacity: 0.8; font-size: 0.9rem; }
+    .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+    .lightbox-content { max-width: 90%; max-height: 80%; border-radius: 8px; }
+    .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
+    .social-proof-popup { position: fixed; bottom: 15px; left: 15px; right: 15px; background: white; color: #333; padding: 1rem; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); display: flex; align-items: center; z-index: 999; transform: translateY(150%); transition: transform 0.5s ease-in-out; }
+    .social-proof-popup.show { transform: translateY(0); }
+    .social-proof-popup img { width: 40px; height: 40px; border-radius: 50%; margin-right: 1rem; }
+    .social-proof-close { background: none; border: none; font-size: 1.2rem; cursor: pointer; position: absolute; top: 5px; right: 10px; color: #aaa; }
     
     .image-carousel-container .main-image { 
         width: 100%; 
@@ -76,12 +109,28 @@
     .store-name { font-weight: bold; font-size: 1.1rem; }
     .verified-badge { width: 24px; height: 24px; flex-shrink: 0; }
 
+    @media (min-width: 768px) {
+        .hero h1 { font-size: 4rem; }
+        .hero p { font-size: 1.25rem; }
+        .section { padding: 80px 0; }
+        .section-title { font-size: 2.8rem; margin-bottom: 50px;}
+        .product-info-grid { grid-template-columns: 1fr 1fr; }
+        .product-info-content h2 { font-size: 2.5rem; }
+        .features-list { grid-template-columns: 1fr 1fr; }
+        .social-proof-popup { bottom: 20px; left: 20px; right: auto; transform: translateX(-120%); }
+        .social-proof-popup.show { transform: translateX(0); }
+    }
 </style>
 <body>
-    <div class="tiktok-container">
-        
+    <header class="hero">
+        <div class="container"><h1> Kerudung Sekolah Instan Morgan Exclusive</h1><p>new produk</p><a href="#order" class="btn">Pesan Sekarang</a></div>
+    </header>
+    <main>
+        <section class="section container">
+            <div class="product-info-grid">
+                <div>
         <div class="image-carousel-container">
-            <img id="mainProductImage" src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive" class="main-image product-image">
+            <img id="mainProductImage" src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqem78bivg6qfc@resize_w450_nl.webp" alt=" Kerudung Sekolah Instan Morgan Exclusive" class="main-image product-info-image">
             <div class="thumbnail-slider">
                 
         <img 
@@ -128,11 +177,13 @@
     
             </div>
         </div>
-    
-        <div class="product-info">
-            <div class="price">Rp 199.000</div>
-            <h1 class="product-title"> Kerudung Sekolah Instan Morgan Exclusive</h1>
-            
+    </div>
+                <div class="product-info-content">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;"> Kerudung Sekolah Instan Morgan Exclusive</h2>
+                    <div class="price">
+                        <span class="original">Rp 152.000</span> <span class="discount">Rp 199.000</span>
+                    </div>
+                    
     <div class="variant-section">
         <p class="variant-title">Pilih Varian:</p>
         <div class="variant-selector">
@@ -187,25 +238,28 @@
     
         </div>
     </div>
-            <div class="store-info-section">
-                
-        <div class="store-info-container">
-            <img src="https://cdn.orderonline.id/uploads/images_7520641753639169702.png" alt="AYRAOLSHOP Logo" class="store-logo">
-            <svg class="verified-badge" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM10.2796 15.6859L16.4839 9.48166C16.8228 9.14278 16.8228 8.59152 16.4839 8.25264C16.145 7.91376 15.5938 7.91376 15.2549 8.25264L9.66509 13.8425L7.74512 11.9225C7.40624 11.5836 6.85498 11.5836 6.5161 11.9225C6.17722 12.2614 6.17722 12.8126 6.5161 13.1515L9.04071 15.6761C9.19894 15.8343 9.42171 15.9333 9.66509 15.9333C9.90847 15.9333 10.1312 15.8343 10.2895 15.6761L10.2796 15.6859Z" fill="#1DA1F2"/></svg>
-        </div>
-    
-            </div>
-            <p class="description">Deskripsi Produk
+                    <p style="margin-top: 20px;">Deskripsi Produk
 Kerudung Sekolah Instan Morgan Exclusive
 
 
 
 Pola kerudung segitiga dengan konsep baru yang membentuk siluet "V" yang dibuat lebih kecil dari ukuran biasanya, sehingga memberikan look lebih fresh. Detail tali serut khas rabbani dengan sentuhan baru yang dibuat dari bahan kerudung yang sama, yang dapat di (adjust) sesuai selera.</p>
-        </div>
+                    <p><strong>Target Audience:</strong> perempuan</p>
+                </div>
+            </div>
+        </section>
+
         
-    <section class="size-details-section product-info">
-        <h2 class="">Detail Ukuran & Spesifikasi</h2>
-        <div class="">
+    <section class="section container">
+        <h2 class="section-title">Keunggulan Produk Kami</h2>
+        <ul class="features-list">
+            <li>Detail Size :</li><li>Size S : P.Depan = 57,5cm</li><li>            P.Belakang = 69,5cm</li><li>Size M : P.Depan = 67,5cm</li><li>             P.Belakang = 79,5cm</li><li>Size L : P.Depan = 77,5cm</li><li>            P.Belakang = 89,5cm</li><li>Size XL : P.Depan = 84,5cm</li><li>              P.Belakang = 96,5cm</li>
+        </ul>
+    </section>
+        
+    <section class="section container">
+        <h2 class="section-title">Detail Ukuran & Spesifikasi</h2>
+        <div class="specs-box">
             <pre>
 
 Detail Unik:
@@ -231,11 +285,69 @@ Detail Produk:
 </pre>
         </div>
     </section>
-        <div id="order" style="padding: 15px;"><!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="hijab-flow-alana-segi-tiga" data-product-id="68dcee051430744f5a087e02" id="oo-embed-form-hijab-flow-alana-segi-tiga-635" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '68dcee051430744f5a087e02', '68dcee051430744f5a087e03', 'oo-embed-form-hijab-flow-alana-segi-tiga-635', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div>
+        <section class="section testimonial-section"><div class="container"><h2 class="section-title">Ulasan Pelanggan</h2><div class="testimonial-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/ca/07/09/ca07097de9245bcbdd52686cd1ad932e.jpg" alt="amel " class="testimonial-avatar">
+                <div>
+                    <p class="testimonial-name">amel </p>
+                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <p class="testimonial-text">"Produknya bagus banget!"</p>
+            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasg-m0wo0aettqxc7c.webp" alt="Review media" class="testimonial-media" onclick="openLightbox(this.src)">
+        </div>
+    
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/04/03/c1/0403c15bbb473a3eb0e98fff4b88e0e2.jpg" alt="fika " class="testimonial-avatar">
+                <div>
+                    <p class="testimonial-name">fika </p>
+                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <p class="testimonial-text">"Sangat memuaskan."</p>
+            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasb-m38znubcytwjf9.webp" alt="Review media" class="testimonial-media" onclick="openLightbox(this.src)">
+        </div>
+    
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/85/a3/64/85a364903e1a59cfedd68e1dc32f202b.jpg" alt="siska" class="testimonial-avatar">
+                <div>
+                    <p class="testimonial-name">siska</p>
+                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <p class="testimonial-text">"Recommended seller!"</p>
+            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasa-m26o2psbpeir46.webp" alt="Review media" class="testimonial-media" onclick="openLightbox(this.src)">
+        </div>
+    
+        <div class="testimonial-card">
+            <div class="testimonial-header">
+                <img src="https://i.pinimg.com/736x/0c/29/32/0c2932e0e226da87256b40ffbeaed302.jpg" alt="gavy" class="testimonial-avatar">
+                <div>
+                    <p class="testimonial-name">gavy</p>
+                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <p class="testimonial-text">"baus banget "</p>
+            <img src=" https://down-id.img.susercontent.com/file/id-11134103-7rasm-m20wn7pjjge71f.webp" alt="Review media" class="testimonial-media" onclick="openLightbox(this.src)">
+        </div>
+    </div></div></section>
+        <section id="order" class="section"><div class="container"><div class="order-container"><h2 class="section-title">Form Pemesanan</h2><!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="hijab-flow-alana-segi-tiga" data-product-id="68dcee051430744f5a087e02" id="oo-embed-form-hijab-flow-alana-segi-tiga-635" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '68dcee051430744f5a087e02', '68dcee051430744f5a087e03', 'oo-embed-form-hijab-flow-alana-segi-tiga-635', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div></div></section>
+    </main>
+    <footer class="footer"><div class="container">
+        <div class="store-info-container">
+            <img src="https://cdn.orderonline.id/uploads/images_7520641753639169702.png" alt="AYRAOLSHOP Logo" class="store-logo">
+            <svg class="verified-badge" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM10.2796 15.6859L16.4839 9.48166C16.8228 9.14278 16.8228 8.59152 16.4839 8.25264C16.145 7.91376 15.5938 7.91376 15.2549 8.25264L9.66509 13.8425L7.74512 11.9225C7.40624 11.5836 6.85498 11.5836 6.5161 11.9225C6.17722 12.2614 6.17722 12.8126 6.5161 13.1515L9.04071 15.6761C9.19894 15.8343 9.42171 15.9333 9.66509 15.9333C9.90847 15.9333 10.1312 15.8343 10.2895 15.6761L10.2796 15.6859Z" fill="#1DA1F2"/></svg>
+        </div>
+    <p>&copy; 2025. All Rights Reserved.</p></div></footer>
+    
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
     </div>
-    <div class="sticky-footer">
-        <a href="#order" style="text-decoration:none;"><button class="cta-button">Beli Sekarang</button></a>
-    </div>
+    
     <script>
 
 document.addEventListener('DOMContentLoaded', () => {
