@@ -6,60 +6,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heylocal Sounds Of Garden Scarf - ayunda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     :root {
         --primary-color: #ca77bf; --secondary-color: #bfca77; --accent-color: #77bfca;
-        --heading-font: 'Poppins', sans-serif; --body-font: 'Inter', sans-serif;
+        --heading-font: 'Cormorant Garamond', sans-serif; --body-font: 'Roboto', sans-serif;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--body-font); line-height: 1.7; background-color: #f9fafb; }
-    h1, h2, h3 { font-family: var(--heading-font); }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 40px 0; }
-    .section-title { font-size: 2.2rem; text-align: center; color: var(--primary-color); margin-bottom: 30px; }
-    .btn { display: inline-block; padding: 15px 35px; background-color: var(--accent-color); color: #000000; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .btn:hover { filter: brightness(1.1); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-    
-    .product-section-bg { background-color: #fff; padding: 40px 0; border-bottom: 1px solid #e5e7eb;}
-    .product-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
-    .product-details h1 { font-size: 2.8rem; color: var(--primary-color); line-height: 1.2; margin-top: 0; margin-bottom: 10px; }
-    .product-details .store-info-container { margin-bottom: 15px; }
-    .price-section { margin: 20px 0; }
-    .price-section .original { text-decoration: line-through; opacity: 0.7; font-size: 1.2rem; margin-right: 15px; }
-    .price-section .discount { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); }
-    .variant-section { margin-top: 20px; }
-    .variant-title { font-weight: bold; margin-bottom: 10px; }
-    .variant-selector { display: flex; flex-wrap: wrap; gap: 10px; }
-    .variant-btn { padding: 8px 20px; border: 2px solid #ddd; border-radius: 50px; background-color: #fff; cursor: pointer; transition: all 0.2s ease; }
+    body { margin: 0; font-family: var(--body-font); background-color: #fff; color: #1f2937; }
+    .page-container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+    .product-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    .product-title { font-size: 2.2rem; margin: 0 0 1rem 0; line-height: 1.2; font-family: var(--heading-font); }
+    .product-details .store-info-container { justify-content: flex-start; margin-bottom: 0.75rem; }
+    .product-details .store-name { font-size: 1rem; }
+    .price-box { margin-bottom: 1.5rem; }
+    .price-box .original { text-decoration: line-through; color: #9ca3af; font-size: 1.1rem; }
+    .price-box .discount { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); }
+    .variant-section { margin-bottom: 1.5rem; }
+    .variant-title { font-weight: 600; margin-bottom: 0.75rem; }
+    .variant-selector { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .variant-btn { padding: 0.5rem 1.25rem; border: 1px solid #e5e7eb; border-radius: 9999px; background-color: #fff; cursor: pointer; transition: all 0.2s; }
     .variant-btn.active { border-color: var(--primary-color); background-color: var(--primary-color); color: #000000; }
-    
-    .info-card { background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; }
-    .info-card .section-title { text-align: left; font-size: 1.8rem; display: flex; align-items: center; gap: 15px; }
-    .info-icon { font-size: 1.5rem; color: var(--accent-color); }
-    .features-list { list-style-type: none; padding-left: 0; display: grid; grid-template-columns: 1fr; gap: 15px;}
-    .features-list li { padding-left: 5px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
-    .features-list .fa-check-circle { color: var(--accent-color); }
-    .specs-box { background: #f8f9fa; padding: 20px; border-radius: 12px; }
+    .cta-button { display: block; width: 100%; text-align: center; padding: 1rem; background-color: var(--accent-color); color: #000000; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.2rem; transition: all 0.3s; }
+    .accordion { margin-top: 2rem; border-top: 1px solid #e5e7eb; }
+    .accordion-item { border-bottom: 1px solid #e5e7eb; }
+    .accordion-header { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 1.25rem 0; background: none; border: none; cursor: pointer; text-align: left; font-size: 1.1rem; font-weight: 600; }
+    .accordion-icon { transition: transform 0.3s; font-style: normal; }
+    .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; }
+    .accordion-item.active .accordion-content { padding-bottom: 1.25rem; }
+    .accordion-content ul { list-style: none; padding-left: 0; }
+    .accordion-content ul li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; }
+    .accordion-content ul li::before { content: '✓'; position: absolute; left: 0; color: var(--accent-color); font-weight: bold; }
+    .specs-box { background: #f9fafb; padding: 1rem; border-radius: 8px; }
     .specs-box pre { white-space: pre-wrap; font-family: var(--body-font); margin: 0; }
+    #order-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
+    .footer { text-align:center; padding: 2rem 1rem; border-top: 1px solid #eee; margin-top: 3rem; color: #6b7280; }
     
-    .order-container { max-width: 700px; margin: auto; background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; }
-    .footer { background-color: var(--primary-color); color: #000000; text-align: center; padding: 40px 0; }
-    .footer .store-name { color: #000000; }
-    .footer p { margin-top: 10px; opacity: 0.8; font-size: 0.9rem; }
-    
-    .main-media-container { width: 100%; aspect-ratio: 1/1; border-radius: 8px; overflow: hidden; background-color: #eee; }
-    .main-media { width: 100%; height: 100%; object-fit: cover; display: block; border: none; }
-    .thumbnail-slider { display: flex; gap: 10px; overflow-x: auto; padding: 10px 0; scrollbar-width: thin; }
-    .thumbnail { position: relative; cursor: pointer; border: 2px solid transparent; border-radius: 6px; flex-shrink: 0; transition: border-color 0.2s; }
+    .media-gallery { display: flex; flex-direction: column-reverse; gap: 1rem; }
+    .thumbnail-strip { display: flex; gap: 0.75rem; overflow-x: auto; scrollbar-width: thin; padding: 0.25rem; }
+    .thumbnail { cursor: pointer; border: 2px solid transparent; border-radius: 8px; flex-shrink: 0; transition: border-color 0.2s; position: relative; }
     .thumbnail.active { border-color: var(--primary-color); }
-    .thumbnail-image { width: 70px; height: 70px; object-fit: cover; border-radius: 4px; display: block; }
+    .thumbnail-image { width: 70px; height: 70px; object-fit: cover; border-radius: 6px; display: block; }
     .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.6); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; pointer-events: none; }
-
+    .main-media-container { flex-grow: 1; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; background-color: #eee; }
+    .main-media { width: 100%; height: 100%; object-fit: cover; }
+    .section-title { font-size: 2.2rem; text-align: center; color: var(--primary-color); margin-bottom: 30px; }
+    
     
     .flash-sale-banner { display: flex; justify-content: space-between; align-items: center; padding: 8px 15px; font-family: var(--heading-font); font-weight: bold; border-radius: 4px; margin-bottom: 15px; }
     .flash-sale-tag { font-size: 1.1rem; letter-spacing: 1px; }
@@ -166,67 +161,50 @@
     .order-product-image { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
     .order-product-title { margin: 0; font-size: 1.1rem; }
 
-    
+
     @media (min-width: 768px) {
-        .product-grid { grid-template-columns: 1fr 1fr; }
-        .product-details h1 { font-size: 3.2rem; }
-        .features-list { grid-template-columns: 1fr 1fr; }
+        .media-gallery { flex-direction: row; }
+        .thumbnail-strip { flex-direction: column; max-height: 500px; overflow-y: auto; padding: 0.25rem; }
+        .product-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+        .product-details { position: sticky; top: 2rem; }
     }
 </style>
 <body>
-    <main>
-        <section class="product-section-bg">
-            <div class="container">
-                <div class="product-grid">
-                    <div class="product-gallery">
-                        <div class="media-carousel">
-                            <div class="main-media-container">
-                                <img id="mainProductMedia" src="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp" alt="Heylocal Sounds Of Garden Scarf" class="main-media image">
-                            </div>
-                            <div class="thumbnail-slider"><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf4a9z64b.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf4a9z64b.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf4a9z64b.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbka-m9h04pfnk6q9f0.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbka-m9h04pfnk6q9f0.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-m9h04pfnk6q9f0.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp" alt="Thumbnail" class="thumbnail-image"></div></div>
-                        </div>
-                    </div>
-                    <div class="product-details">
-                        <div class="store-info-container"><img src="https://cdn.orderonline.id/uploads/images_7520641753639169702.png" alt="ayunda Logo" class="store-logo"></div>
-                        <h1>Heylocal Sounds Of Garden Scarf</h1>
-                        
-    <div class="product-stats" data-template="default">
+    <main class="page-container">
+        <div class="product-grid">
+            <div class="media-gallery">
+                <div class="thumbnail-strip"><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf4a9z64b.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf4a9z64b.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf4a9z64b.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbka-m9h04pfnk6q9f0.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbka-m9h04pfnk6q9f0.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbka-m9h04pfnk6q9f0.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail" onclick="window.changeMedia('image', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp', 'https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp', this)"><img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp" alt="Thumbnail" class="thumbnail-image"></div></div>
+                <div class="main-media-container">
+                    <img id="mainProductMedia" src="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp" alt="Heylocal Sounds Of Garden Scarf" class="main-media image">
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="store-info-container"><img src="https://cdn.orderonline.id/uploads/images_7520641753639169702.png" alt="ayunda Logo" class="store-logo"><svg class="verified-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM10.2796 15.6859L16.4839 9.48166C16.8228 9.14278 16.8228 8.59152 16.4839 8.25264C16.145 7.91376 15.5938 7.91376 15.2549 8.25264L9.66509 13.8425L7.74512 11.9225C7.40624 11.5836 6.85498 11.5836 6.5161 11.9225C6.17722 12.2614 6.17722 12.8126 6.5161 13.1515L9.04071 15.6761C9.19894 15.8343 9.42171 15.9333 9.66509 15.9333C9.90847 15.9333 10.1312 15.8343 10.2895 15.6761L10.2796 15.6859Z" fill="#1DA1F2"/></svg></div>
+                <h1 class="product-title">Heylocal Sounds Of Garden Scarf</h1>
+                
+    <div class="product-stats" data-template="shopify">
         <div class="stat-item rating-item"><span class="rating-value">4.9</span><span class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span></div>
         <div class="stat-item"><span class="stat-value">5.6RB</span> <span class="stat-label">Penilaian</span></div>
         <div class="stat-item"><span class="stat-value">10RB+</span> <span class="stat-label">Terjual</span></div>
     </div>
-                        <div class="price-section">
-                            
-                            <span class="original">Rp 185.000</span> <span class="discount">Rp 199.000</span>
-                        </div>
-                        <p>Terinspirasi dari keindahan taman yang terlihat dari setiap sudutnya. Dengan pepohonan dan bunga yang menciptakan suasana yang damai. Sejuknya angin ditaman penuh bunga, semilir kedamaian yang tak tergantikan.
-
-Terdapat 7 pilihan warna
-
-Material scarf nyaman dan mudah dibentuk
-
-</p>
-                        <div class="variant-section"><p class="variant-title">Pilih Varian:</p><div class="variant-selector"><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp">Ivorine</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp">Clover</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81zti-me414in89ziefb@resize_w450_nl.webp">Eclipse</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztf-me414in8fls602@resize_w450_nl.webp">Dovey</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81zth-me414in8h0cm53@resize_w450_nl.webp">Aster</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztl-me414in8iex2fc@resize_w450_nl.webp">Scarlet</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztl-me414in8iex2fc@resize_w450_nl.webp">Rosetta</button></div></div>
-                        <a href="#order" class="btn" style="margin-top:20px;">Pesan Sekarang</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-    <section class="section container">
-        <div class="info-card">
-            <h2 class="section-title"><i class="fas fa-star info-icon"></i>Keunggulan Produk</h2>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i>Terdapat 2 logo signature heylocal di sisi utama</li><li><i class="fas fa-check-circle"></i>Penyelesaian pinggir lasercut</li><li><i class="fas fa-check-circle"></i>Hardbox</li><li><i class="fas fa-check-circle"></i>2 Size</li>
-            </ul>
+                <div class="price-box">
+                    
+    <div class="flash-sale-banner" style="background-color: #6a3911; color: #ffffff;">
+        <div class="flash-sale-tag">
+            <i class="fas fa-bolt"></i> FLASH SALE
         </div>
-    </section>
-        
-    <section class="section container">
-        <div class="info-card">
-            <h2 class="section-title"><i class="fas fa-ruler-combined info-icon"></i>Detail Ukuran & Spesifikasi</h2>
-            <div class="specs-box"><pre>Size Chart :
+        <div class="countdown-timer">
+            <span>BERAKHIR DALAM</span>
+            <div id="countdown-hours" class="countdown-box" style="background-color: rgba(255,255,255,0.15); color: #ffffff;">00</div>:
+            <div id="countdown-minutes" class="countdown-box" style="background-color: rgba(255,255,255,0.15); color: #ffffff;">00</div>:
+            <div id="countdown-seconds" class="countdown-box" style="background-color: rgba(255,255,255,0.15); color: #ffffff;">00</div>
+        </div>
+    </div>
+                    <span class="original">Rp 185.000</span><span class="discount">Rp 199.000</span>
+                </div>
+                <div class="variant-section"><p class="variant-title">Pilih Varian:</p><div class="variant-selector"><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp">Ivorine</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp">Clover</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81zti-me414in89ziefb@resize_w450_nl.webp">Eclipse</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztf-me414in8fls602@resize_w450_nl.webp">Dovey</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81zth-me414in8h0cm53@resize_w450_nl.webp">Aster</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztl-me414in8iex2fc@resize_w450_nl.webp">Scarlet</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-81ztl-me414in8iex2fc@resize_w450_nl.webp">Rosetta</button></div></div>
+                <a href="#order-section" class="cta-button">Pesan Sekarang</a>
+                <div class="accordion"><div class="accordion-item"><button class="accordion-header"><span>Deskripsi Produk</span><span class="accordion-icon">+</span></button><div class="accordion-content"><p>Terinspirasi dari keindahan taman yang terlihat dari setiap sudutnya. Dengan pepohonan dan bunga yang menciptakan suasana yang damai. Sejuknya angin ditaman penuh bunga, semilir kedamaian yang tak tergantikan.<br><br>Terdapat 7 pilihan warna<br><br>Material scarf nyaman dan mudah dibentuk<br><br></p></div></div><div class="accordion-item"><button class="accordion-header"><span>Keunggulan Utama</span><span class="accordion-icon">+</span></button><div class="accordion-content"><ul><li>Terdapat 2 logo signature heylocal di sisi utama</li><li>Penyelesaian pinggir lasercut</li><li>Hardbox</li><li>2 Size</li></ul></div></div><div class="accordion-item"><button class="accordion-header"><span>Detail Ukuran & Spesifikasi</span><span class="accordion-icon">+</span></button><div class="accordion-content"><div class="specs-box"><pre>Size Chart :
 
 STANDARD : 115 x 115 cm
 
@@ -234,14 +212,15 @@ LARGE : 140 x 140 cm
 
 
 
-Toleransi size hingga ± 1cm</pre></div>
+Toleransi size hingga ± 1cm</pre></div></div></div></div>
+            </div>
         </div>
-    </section>
-        
+    </main>
+    
     <section class="featured-gallery-section">
         <div class="container">
             <h2 class="section-title">Galeri Unggulan</h2>
-            <div class="gallery-grid" data-template="default">
+            <div class="gallery-grid" data-template="shopify">
                 
         <div class="gallery-item">
             <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134207-7rbk2-m9h04pf3utqa9f.webp')">
@@ -275,7 +254,7 @@ Toleransi size hingga ± 1cm</pre></div>
         </div>
     </section>
     
-        <section class="testimonials-section"><h2 class="section-title">Ulasan Pelanggan</h2><div class="testimonials-grid">
+    <section class="testimonials-section"><h2 class="section-title">Ulasan Pelanggan</h2><div class="testimonials-grid">
         <div class="testimonial-card">
             <div class="testimonial-header">
                 <img src="https://i.pinimg.com/736x/0c/29/32/0c2932e0e226da87256b40ffbeaed302.jpg" alt="amel " class="testimonial-avatar">
@@ -320,15 +299,13 @@ Toleransi size hingga ± 1cm</pre></div>
             <p class="testimonial-text">"bagus banget "</p>
             <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk2-m7nrlq3p945387.webp" alt="Review media" class="testimonial-media" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7rbk2-m7nrlq3p945387.webp')">
         </div></div></section>
-        
-        <section id="order" class="section"><div class="container"><div class="order-container"><h2 class="section-title">hijab yang siap menemani bulan puasa bunda"</h2>
+    <section id="order-section" class="page-container" style="max-width: 700px;"><h2 class="section-title">hijab yang siap menemani bulan puasa bunda"</h2>
         <div class="order-form-header">
             <img id="order-form-product-image" src="https://down-id.img.susercontent.com/file/id-11134207-81ztp-me40agwop5he8d@resize_w450_nl.webp" alt="Heylocal Sounds Of Garden Scarf" class="order-product-image" />
             <h3 id="order-form-product-title" class="order-product-title">Anda akan memesan: <strong>Heylocal Sounds Of Garden Scarf</strong></h3>
         </div>
-    <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="deyn-scarf-hijab" data-product-id="6859336ae630d7c1ad04dcdb" id="oo-embed-form-deyn-scarf-hijab-5551" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '6859336ae630d7c1ad04dcdb', '6859336ae630d7c1ad04dcdc', 'oo-embed-form-deyn-scarf-hijab-5551', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div></div></section>
-    </main>
-    <footer class="footer"><div class="container"><div class="store-info-container"><img src="https://cdn.orderonline.id/uploads/images_7520641753639169702.png" alt="ayunda Logo" class="store-logo"></div><p>&copy; 2025. All Rights Reserved.</p></footer>
+    <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="deyn-scarf-hijab" data-product-id="6859336ae630d7c1ad04dcdb" id="oo-embed-form-deyn-scarf-hijab-5551" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '6859336ae630d7c1ad04dcdb', '6859336ae630d7c1ad04dcdc', 'oo-embed-form-deyn-scarf-hijab-5551', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></section>
+    <footer class="footer"><div class="store-info-container"><img src="https://cdn.orderonline.id/uploads/images_7520641753639169702.png" alt="ayunda Logo" class="store-logo"><svg class="verified-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM10.2796 15.6859L16.4839 9.48166C16.8228 9.14278 16.8228 8.59152 16.4839 8.25264C16.145 7.91376 15.5938 7.91376 15.2549 8.25264L9.66509 13.8425L7.74512 11.9225C7.40624 11.5836 6.85498 11.5836 6.5161 11.9225C6.17722 12.2614 6.17722 12.8126 6.5161 13.1515L9.04071 15.6761C9.19894 15.8343 9.42171 15.9333 9.66509 15.9333C9.90847 15.9333 10.1312 15.8343 10.2895 15.6761L10.2796 15.6859Z" fill="#1DA1F2"/></svg></div><p>&copy; 2025 ayunda.</p></footer>
     
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
@@ -384,6 +361,33 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        const countdownHoursEl = document.getElementById('countdown-hours');
+        const countdownMinutesEl = document.getElementById('countdown-minutes');
+        const countdownSecondsEl = document.getElementById('countdown-seconds');
+        
+        if (countdownHoursEl && countdownMinutesEl && countdownSecondsEl) {
+            let durationInSeconds = 24 * 3600;
+
+            const timerInterval = setInterval(() => {
+                if (durationInSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    const banner = document.querySelector('.flash-sale-banner');
+                    if (banner) banner.innerHTML = '<div class="flash-sale-tag">SALE ENDED</div>';
+                    return;
+                }
+                
+                durationInSeconds--;
+
+                const hours = Math.floor(durationInSeconds / 3600);
+                const minutes = Math.floor((durationInSeconds % 3600) / 60);
+                const seconds = durationInSeconds % 60;
+
+                countdownHoursEl.textContent = String(hours).padStart(2, '0');
+                countdownMinutesEl.textContent = String(minutes).padStart(2, '0');
+                countdownSecondsEl.textContent = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+
         const socialProofData = {
             names: "Sari, Dewi, Maya, Putri, Rina, Indira, Kartika, Lestari, Permata, Vina, Dina, Anisa, Fitri, Novi, Ratna".split(',').map(s => s.trim()).filter(Boolean),
             cities: "Jakarta, Surabaya, Bandung, Medan, Bekasi, Tangerang, Depok, Semarang, Palembang, Makassar, Yogyakarta, Malang, Bogor, Batam, Denpasar".split(',').map(s => s.trim()).filter(Boolean),
@@ -433,6 +437,28 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = header.nextElementSibling;
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-item.active').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                    }
+                });
+
+                item.classList.toggle('active', !isActive);
+                if (!isActive) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
         const mainMediaContainer = document.querySelector('.main-media-container');
         const variantBtns = document.querySelectorAll('.variant-btn[data-image-url]');
         const productName = "Heylocal Sounds Of Garden Scarf";
