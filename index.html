@@ -241,22 +241,6 @@ Material scarf nyaman dan mudah dibentuk
             <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp')">
         </div>
     
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9h04pf3jl3md6.webp')">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m9h04petzg9p79.webp')">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134207-7rbk1-m9h04petk00t88.webp')">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134207-7rbk0-m9h04pf3jlel6a.webp')">
-        </div>
-    
             </div>
         </div>
     </section>
@@ -319,14 +303,6 @@ Material scarf nyaman dan mudah dibentuk
         <img class="lightbox-content" id="lightbox-img">
     </div>
     
-    <div id="social-proof-popup" class="social-proof-popup">
-        <img id="social-proof-avatar" src="https://i.pravatar.cc/40" alt="Avatar" />
-        <div class="social-proof-content">
-            <p id="social-proof-text"></p>
-            <div id="social-proof-time" class="social-proof-time">beberapa saat lalu</div>
-        </div>
-        <button class="social-proof-close">&times;</button>
-    </div>
     <script>
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -393,52 +369,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 countdownMinutesEl.textContent = String(minutes).padStart(2, '0');
                 countdownSecondsEl.textContent = String(seconds).padStart(2, '0');
             }, 1000);
-        }
-
-        const socialProofData = {
-            names: "Sari, Dewi, Maya, Putri, Rina, Indira, Kartika, Lestari, Permata, Vina, Dina, Anisa, Fitri, Novi, Ratna".split(',').map(s => s.trim()).filter(Boolean),
-            cities: "Jakarta, Surabaya, Bandung, Medan, Bekasi, Tangerang, Depok, Semarang, Palembang, Makassar, Yogyakarta, Malang, Bogor, Batam, Denpasar".split(',').map(s => s.trim()).filter(Boolean),
-            productName: "Heylocal Sounds Of Garden Scarf",
-            interval: 8000,
-            duration: 5000
-        };
-
-        const popup = document.getElementById('social-proof-popup');
-        
-        if (popup && socialProofData.names.length > 0 && socialProofData.cities.length > 0) {
-            const textEl = document.getElementById('social-proof-text');
-            const avatarEl = document.getElementById('social-proof-avatar');
-            const closeBtn = popup.querySelector('.social-proof-close');
-            let proofTimeout, proofInterval;
-            
-            const showSocialProof = () => {
-                const randomName = socialProofData.names[Math.floor(Math.random() * socialProofData.names.length)];
-                const randomCity = socialProofData.cities[Math.floor(Math.random() * socialProofData.cities.length)];
-                
-                if (textEl) textEl.innerHTML = `${randomName} dari <strong>${randomCity}</strong> baru saja membeli <br><strong>${socialProofData.productName}</strong>`;
-                if (avatarEl) avatarEl.src = 'https://i.pravatar.cc/40' + '?u=' + Date.now();
-                
-                popup.classList.add('show');
-                
-                clearTimeout(proofTimeout);
-                proofTimeout = setTimeout(() => popup.classList.remove('show'), socialProofData.duration);
-            };
-
-            const closeSocialProof = () => { 
-                clearTimeout(proofTimeout); 
-                clearInterval(proofInterval); 
-                popup.classList.remove('show'); 
-            };
-            
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closeSocialProof);
-            }
-
-            // Start after a short delay
-            setTimeout(() => { 
-                showSocialProof(); 
-                proofInterval = setInterval(showSocialProof, socialProofData.interval + socialProofData.duration); 
-            }, 5000);
         }
 });
 </script>
