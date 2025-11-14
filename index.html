@@ -1,640 +1,354 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Celana Olahraga Yoga - nexco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Long Sleeve Top Asymmetrical - nexco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <style>
     :root {
-        --primary-color: #c74d4d; --secondary-color: #c78a4d; --accent-color: #c74d8a;
-        --heading-font: 'Work Sans', sans-serif; --body-font: 'Work Sans', sans-serif;
+        --primary-color: #222222; --secondary-color: #222222; --accent-color: #222222;
+        --heading-font: 'Poppins', sans-serif; --body-font: 'Inter', sans-serif;
+        --text-color: #333; --bg-color: #ffffff; --light-bg-color: #f8f9fa;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--body-font); line-height: 1.7; background-color: #f9fafb; }
-    h1, h2, h3 { font-family: var(--heading-font); }
-    img, video { max-width: 100%; height: auto; display: block; }
+    body { margin: 0; font-family: var(--body-font); color: var(--text-color); line-height: 1.7; background-color: var(--bg-color); }
+    img { max-width: 100%; height: auto; display: block; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 40px 0; }
-    .section-title { font-size: 2.2rem; text-align: center; color: var(--primary-color); margin-bottom: 30px; }
-    .btn { display: inline-block; padding: 15px 35px; background-color: var(--accent-color); color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .btn:hover { filter: brightness(1.1); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .section { padding: 60px 0; }
+    .section-title { font-family: var(--heading-font); font-size: 2.5rem; text-align: center; color: var(--primary-color); margin-bottom: 50px; }
+    .btn { display: inline-block; padding: 15px 35px; background-color: var(--accent-color); color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); filter: brightness(1.1); }
+    .hero { background-color: var(--light-bg-color); padding: 80px 0; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    .hero-text h1 { font-family: var(--heading-font); font-size: 2.8rem; color: var(--primary-color); line-height: 1.2; margin: 0 0 20px 0; }
+    .hero-text p { font-size: 1.1rem; max-width: 500px; margin-bottom: 30px; }
+    .hero-image { box-shadow: 0 15px 40px rgba(0,0,0,0.15); border-radius: 12px; }
+    #main-product-image { transition: opacity 0.3s ease-in-out; border-radius: 12px; }
     
-    .product-section-bg { background-color: #fff; padding: 40px 0; border-bottom: 1px solid #e5e7eb;}
-    .product-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
-    .product-details h1 { font-size: 2.8rem; color: var(--primary-color); line-height: 1.2; margin-top: 0; margin-bottom: 10px; }
-    .product-details .store-info-container { margin-bottom: 15px; }
-    .price-section { margin: 20px 0; }
-    .price-section .original { text-decoration: line-through; opacity: 0.7; font-size: 1.2rem; margin-right: 15px; }
-    .price-section .discount { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); }
-    .variant-section { margin-top: 20px; }
-    .variant-title { font-weight: bold; margin-bottom: 10px; }
-    .variant-selector { display: flex; flex-wrap: wrap; gap: 10px; }
-    .variant-btn { padding: 8px 20px; border: 2px solid #ddd; border-radius: 50px; background-color: #fff; cursor: pointer; transition: all 0.2s ease; }
-    .variant-btn.active { border-color: var(--primary-color); background-color: var(--primary-color); color: #ffffff; }
-    
-    .info-card { background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; }
-    .info-card .section-title { text-align: left; font-size: 1.8rem; display: flex; align-items: center; gap: 15px; }
-    .info-icon { font-size: 1.5rem; color: var(--accent-color); }
-    .features-list { list-style-type: none; padding-left: 0; display: grid; grid-template-columns: 1fr; gap: 15px;}
-    .features-list li { padding-left: 5px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
-    .features-list .fa-check-circle { color: var(--accent-color); }
-    .specs-box { background: #f8f9fa; padding: 20px; border-radius: 12px; }
-    .specs-box pre { white-space: pre-wrap; font-family: var(--body-font); margin: 0; }
-    
-    .product-gallery-slider { position: relative; overflow: hidden; border-radius: 8px; background-color: #eee; aspect-ratio: 1/1; }
-    .slider-wrapper { display: flex; transition: transform 0.3s ease-out; height: 100%; }
-    .slide { flex-shrink: 0; width: 100%; height: 100%; cursor: grab; }
-    .slide:active { cursor: grabbing; }
-    .slide img, .slide video { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-    .slide video { pointer-events: auto; } /* Allow video controls to be clicked */
-    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer; z-index: 10; font-size: 20px; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
-    .slider-btn.prev { left: 10px; }
-    .slider-btn.next { right: 10px; }
-    .thumbnail-slider { display: flex; gap: 10px; overflow-x: auto; padding: 10px 0; scrollbar-width: thin; }
-    .thumbnail { position: relative; cursor: pointer; border: 2px solid transparent; border-radius: 6px; flex-shrink: 0; transition: border-color 0.2s; overflow: hidden; }
-    .thumbnail.active { border-color: var(--primary-color); }
-    .thumbnail-image { width: 70px; height: 70px; object-fit: cover; display: block; }
-    .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; background: rgba(0,0,0,0.6); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; pointer-events: none; }
+    .price { margin: 20px 0; font-size: 1.5rem; }
+    .price .original { text-decoration: line-through; color: #888; margin-right: 10px; }
+    .price .discount { font-weight: bold; color: var(--primary-color); font-size: 2rem; }
 
-    .order-container { max-width: 700px; margin: auto; background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; }
+    .variants-title { font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 10px; font-size: 1.1rem; }
+    .variants-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .default-variant { cursor: pointer; text-align: center; }
+    .variant-thumbnail { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 3px solid #eee; transition: all 0.3s ease; }
+    .default-variant:hover .variant-thumbnail { border-color: var(--secondary-color); }
+    .default-variant.active .variant-thumbnail { border-color: var(--accent-color); transform: scale(1.1); }
+    
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 12px; margin-top: 30px; }
+    .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .product-details-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+    .product-details-section h4 { font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 10px; }
+    .product-details-section pre { white-space: pre-wrap; background-color: var(--light-bg-color); padding: 15px; border-radius: 8px; font-family: var(--body-font); line-height: 1.6; }
+
+    .testimonial-section { background-color: var(--light-bg-color); }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+    .testimonial-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+    .testimonial-header { display: flex; align-items: center; margin-bottom: 15px; }
+    .testimonial-avatar { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover; }
+    .testimonial-name { font-weight: bold; } .testimonial-rating { color: #ffc107; }
+    .testimonial-text { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+    .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .testimonial-media-thumb { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .testimonial-media-thumb:hover { transform: scale(1.05); }
+    
+    .order-container { max-width: 700px; margin: auto; background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     .footer { background-color: var(--primary-color); color: #ffffff; text-align: center; padding: 40px 0; }
-    .footer .store-name { color: #ffffff; }
-    .footer p { margin-top: 10px; opacity: 0.8; font-size: 0.9rem; }
+    .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+    .lightbox.visible { opacity: 1; }
+    .lightbox-content { max-width: 90vw; max-height: 80vh; transform: scale(0.9); transition: transform 0.3s ease; }
+    .lightbox.visible .lightbox-content { transform: scale(1); }
+    .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
     
-    
-    .flash-sale-banner { display: flex; justify-content: space-between; align-items: center; padding: 6px 12px; font-family: var(--heading-font); font-weight: 700; border-radius: 4px; margin-bottom: 15px; }
-    .flash-sale-tag { font-size: 0.8rem; letter-spacing: 0.5px; }
-    .flash-sale-tag .fa-bolt { margin-right: 4px; font-size: 0.7rem; }
-    .countdown-timer { display: flex; align-items: center; gap: 4px; font-size: 0.75rem; }
-    .countdown-box { padding: 2px 5px; border-radius: 3px; font-size: 0.85rem; min-width: 22px; text-align: center; font-weight: bold; }
-
-    
-    .product-stats { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
-    .stat-item { display: flex; align-items: center; gap: 5px; font-size: 0.95rem; padding-right: 15px; border-right: 1px solid #e0e0e0; }
-    .stat-item:last-child { border-right: none; }
-    .stat-value, .rating-value { font-weight: bold; color: var(--primary-color); }
-    .rating-value { text-decoration: underline; }
-    .rating-stars { color: #ffc107; }
-    .stat-label { color: #666; }
-    /* Template-specific adjustments */
-    .product-stats[data-template="shopee"] { background-color: #fafafa; padding: 10px 15px; border-radius: 4px; }
-    .product-stats[data-template="tiktok"] { justify-content: space-around; border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 10px 0; margin: 15px 0; }
-    .product-stats[data-template="tiktok"] .stat-item { border-right: none; }
-    .product-stats[data-template="tiktok"] .stat-label { color: #ccc; }
-
-    
-    .featured-gallery-section { padding: 40px 20px; background-color: #fff; }
-    .gallery-grid { display: grid; gap: 15px; }
-
-    /* Default & Shopee style */
-    .gallery-grid[data-template="default"],
-    .gallery-grid[data-template="shopee"] {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    
-    /* Shopify style (Masonry) */
-    .gallery-grid[data-template="shopify"] {
-        column-count: 3;
-        column-gap: 15px;
-    }
-    .gallery-grid[data-template="shopify"] .gallery-item {
-        break-inside: avoid;
-        margin-bottom: 15px;
-    }
-
-    /* TikTok style */
-    .gallery-grid[data-template="tiktok"] {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery-item img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
-    @media (max-width: 768px) {
-        .gallery-grid[data-template="shopify"] { column-count: 2; }
-    }
-    @media (max-width: 480px) {
-        .gallery-grid[data-template="shopify"] { column-count: 1; }
-    }
-
-    
-    .testimonials-section { background-color: #f8f9fa; padding: 40px 20px; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
-    .testimonial-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.07); }
-    .testimonial-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-    .testimonial-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
-    .testimonial-name { font-weight: bold; }
-    .testimonial-rating { color: #ffc107; font-size: 1rem; }
-    .testimonial-text { font-style: italic; color: #555; margin-bottom: 15px; }
-    .testimonial-media { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; margin-top: 10px; cursor: pointer; transition: transform 0.2s; }
-    .testimonial-media:hover { transform: scale(1.05); }
-
-    
-    .store-info-container { display: flex; align-items: center; gap: 8px; }
-    .store-logo { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; border: 1px solid #eee; }
-    .store-name { font-weight: bold; font-size: 1.1rem; }
-    .verified-badge { width: 24px; height: 24px; flex-shrink: 0; }
-
-    
-    .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); align-items: center; justify-content: center; animation: fadeIn 0.3s; }
-    .lightbox-content { margin: auto; display: block; max-width: 90%; max-height: 85%; border-radius: 8px; }
-    .lightbox-video { display: none; }
-    .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
-    .lightbox-close:hover, .lightbox-close:focus { color: #bbb; text-decoration: none; }
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-
-    
-    .social-proof-popup { position: fixed; bottom: 20px; left: 20px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(5px); color: #333; padding: 12px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; align-items: center; z-index: 999; transform: translateX(-150%); transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); max-width: 300px; border: 1px solid rgba(0,0,0,0.05); }
-    .social-proof-popup.show { transform: translateX(0); }
-    .social-proof-popup img { width: 35px; height: 35px; border-radius: 50%; margin-right: 12px; }
+    .social-proof-popup { position: fixed; bottom: -100px; left: 15px; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); color: white; padding: 12px 16px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); display: flex; align-items: center; z-index: 999; transition: transform 0.5s ease-in-out; }
+    .social-proof-popup.show { transform: translateY(-115px); }
+    .social-proof-popup img { width: 40px; height: 40px; border-radius: 50%; margin-right: 12px; }
     .social-proof-content p { margin: 0; font-size: 0.85rem; line-height: 1.3; }
-    .social-proof-time { font-size: 0.7rem; color: #888; margin-top: 2px; }
-    .social-proof-close { background: none; border: none; font-size: 1rem; cursor: pointer; position: absolute; top: 8px; right: 8px; color: #aaa; }
-    @media (max-width: 480px) {
-        .social-proof-popup { left: 10px; right: 10px; bottom: 10px; max-width: none; }
-    }
-
+    .social-proof-content small { font-size: 0.7rem; opacity: 0.7; }
     
-    .order-form-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
-    .order-product-image { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
-    .order-product-title { margin: 0; font-size: 1.1rem; }
-
+    .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+    
+    #urgency-timer-container { 
+            background-color: rgba(0,0,0,0.05); text-align: center; padding: 15px; border-radius: 8px; margin: 20px auto;
+         }
+    #urgency-headline {
+        font-family: var(--body-font);
+        font-size: 0.9rem;
+        margin: 0 0 10px 0;
+        font-weight: 500;
+        color: inherit;
+    }
+    #urgency-timer { display: flex; justify-content: center; gap: 8px; }
+    .timer-box {
+        background-color: var(--primary-color);
+        color: #ffffff;
+        
+        padding: 8px; border-radius: 5px; min-width: 50px; display: flex; flex-direction: column; align-items: center;
+    }
+    .timer-box span { font-family: var(--heading-font); font-size: 1.5rem; font-weight: bold; line-height: 1; }
+    .timer-box small { font-size: 0.6rem; opacity: 0.8; text-transform: uppercase; }
+    #urgency-end-message { font-size: 1.1rem; font-weight: bold; color: var(--accent-color); }
     
     @media (min-width: 768px) {
-        .product-grid { grid-template-columns: 1fr 1fr; }
-        .product-details h1 { font-size: 3.2rem; }
-        .features-list { grid-template-columns: 1fr 1fr; }
+        .hero-grid { grid-template-columns: 1fr 1fr; }
+        .hero-text h1 { font-size: 3.5rem; }
     }
 </style>
 <body>
-    <main>
-        <section class="product-section-bg">
-            <div class="container">
-                <div class="product-grid">
-                    <div class="product-gallery">
-                        <div class="product-gallery-slider">
-                            <div class="slider-wrapper"><div class="slide"><video playsinline controls preload="metadata" poster="https://down-id.img.susercontent.com/file/id-11134207-82252-mghbz8tnkpah50.webp"><source src="https://down-cvs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2n-mbrx6pquoh3n26.16005581753183680.mp4"></video></div><div class="slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-82252-mghbz8tnkpah50.webp" alt=" Celana Olahraga Yoga - Main" loading="lazy"></div><div class="slide"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdwv-mdms4m4bsaske9.webp" alt=" Celana Olahraga Yoga - Gallery" loading="lazy"></div><div class="slide"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdx5-mdms4mir5uck50.webp" alt=" Celana Olahraga Yoga - Gallery" loading="lazy"></div><div class="slide"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvw-mdms4mvso5wkb8.webp" alt=" Celana Olahraga Yoga - Gallery" loading="lazy"></div><div class="slide"><img src="https://down-id.img.susercontent.com/file/sg-11134201-824i0-mei4ivy2zuo047.webp" alt=" Celana Olahraga Yoga - Gallery" loading="lazy"></div><div class="slide"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdyg-mdms4lq6blqs76.webp" alt=" Celana Olahraga Yoga - Gallery" loading="lazy"></div></div>
-                            <button class="slider-btn prev">&#10094;</button>
-                            <button class="slider-btn next">&#10095;</button>
-                        </div>
-                        <div class="thumbnail-slider"><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/id-11134207-82252-mghbz8tnkpah50.webp" alt="Thumbnail" class="thumbnail-image"><div class="play-icon"><i class="fas fa-play"></i></div></div><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/id-11134207-82252-mghbz8tnkpah50.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdwv-mdms4m4bsaske9.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdx5-mdms4mir5uck50.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvw-mdms4mvso5wkb8.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/sg-11134201-824i0-mei4ivy2zuo047.webp" alt="Thumbnail" class="thumbnail-image"></div><div class="thumbnail"><img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdyg-mdms4lq6blqs76.webp" alt="Thumbnail" class="thumbnail-image"></div></div>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text animate-on-scroll">
+                    <h1>Long Sleeve Top Asymmetrical</h1>
+                    <p>anti bakteri</p>
+                    <div class="price">
+                        <span class="original">Rp 250.000</span><span class="discount">Rp 99.000</span>
                     </div>
-                    <div class="product-details">
-                        <div class="store-info-container"><span class="store-name">nexco</span><svg class="verified-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM10.2796 15.6859L16.4839 9.48166C16.8228 9.14278 16.8228 8.59152 16.4839 8.25264C16.145 7.91376 15.5938 7.91376 15.2549 8.25264L9.66509 13.8425L7.74512 11.9225C7.40624 11.5836 6.85498 11.5836 6.5161 11.9225C6.17722 12.2614 6.17722 12.8126 6.5161 13.1515L9.04071 15.6761C9.19894 15.8343 9.42171 15.9333 9.66509 15.9333C9.90847 15.9333 10.1312 15.8343 10.2895 15.6761L10.2796 15.6859Z" fill="#1DA1F2"/></svg></div>
-                        <h1> Celana Olahraga Yoga</h1>
-                        
-    <div class="product-stats" data-template="default">
-        <div class="stat-item rating-item"><span class="rating-value">4.9</span><span class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span></div>
-        <div class="stat-item"><span class="stat-value">1.6RB</span> <span class="stat-label">Penilaian</span></div>
-        <div class="stat-item"><span class="stat-value">9RB+</span> <span class="stat-label">Terjual</span></div>
-    </div>
-                        <div class="price-section">
-                            
-    <div class="flash-sale-banner" style="background-color: #e92907; color: #ffffff;">
-        <div class="flash-sale-tag">
-            <i class="fas fa-bolt"></i> FLASH SALE
-        </div>
-        <div class="countdown-timer">
-            <span>BERAKHIR DALAM</span>
-            <div id="countdown-hours" class="countdown-box" style="background-color: rgba(255,255,255,0.15); color: #ffffff;">00</div>:
-            <div id="countdown-minutes" class="countdown-box" style="background-color: rgba(255,255,255,0.15); color: #ffffff;">00</div>:
-            <div id="countdown-seconds" class="countdown-box" style="background-color: rgba(255,255,255,0.15); color: #ffffff;">00</div>
+                    <a href="#order" class="btn" style="margin-top:20px;">Pesan Sekarang</a>
+                </div>
+                <div class="animate-on-scroll">
+                    <img id="main-product-image" src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Long Sleeve Top Asymmetrical" class="hero-image">
+                    <div class="color-variants-container"><h4 class="variants-title">Pilih Varian:</h4>
+        <div class="variants-grid">
+            
+                <div class="default-variant active" onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Putih " class="variant-thumbnail">
+                </div>
+            
+                <div class="default-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Hitam " class="variant-thumbnail">
+                </div>
+            
+                <div class="default-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Abu-abu" class="variant-thumbnail">
+                </div>
+            
         </div>
     </div>
-                            <span class="original">Rp 189.000</span> <span class="discount">Rp 154.000</span>
-                        </div>
-                        <div><p>KKTOP Celana Olahraga Yoga Wanita Legging Sport Celana Cutbray Olahraga High Waist Pants Gym (C001)</p></div>
-                        <div class="variant-section"><p class="variant-title">Pilih Varian:</p><div class="variant-selector"><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0r-mdflq5gmqvt881@resize_w450_nl.webp">hitam</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdflq5gmsado0e@resize_w450_nl.webp">bule</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdflq5gmtoy43a@resize_w450_nl.webp">choco</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdflq5gmv3ikc1@resize_w450_nl.webp">gray</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0k-mdflq5gmwi3075@resize_w450_nl.webp">grayblue</button><button class="variant-btn" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdflq5gmxwngf0@resize_w450_nl.webp">ungu </button></div></div>
-                        <a href="#order" class="btn" style="margin-top:20px;">Pesan Sekarang</a>
-                    </div>
                 </div>
             </div>
+        </div>
+    </header>
+    <main>
+        <section class="section container animate-on-scroll">
+            <h2 class="section-title">Detail Produk</h2>
+            <div style="text-align:center; max-width: 700px; margin: -30px auto 40px auto; white-space: pre-wrap;">Joybasic Celana Korset mengecilan pinggang, perut, dan menaikkan bagian pantat.</div>
+            <div class="video-container"><video autoplay muted loop playsinline src="https://down-bs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2o-mdbbe1s5bscc92.16000081754973439.mp4"></video></div>
+            <div class="product-details-section"><h4>Spesifikasi Produk</h4><pre>Bahan: Nylon Premium Level A+
+
+Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman buat sehari hari</pre></div>
+            <div class="product-details-section"><h4>Tabel Ukuran</h4><pre>Ukuran: XS-XXXL
+
+XS/S : 40 - 50 kg
+
+M/L :50 - 60 kg
+
+XL/2XL : 60 -70 kg
+
+XXXL : 70 - 90 kg</pre></div>
         </section>
 
+        <section class="section container animate-on-scroll"><h2 class="section-title">Galeri Produk</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product gallery image" style="border-radius: 8px;"></div></section>
         
-    <section class="section container">
-        <div class="info-card">
-            <h2 class="section-title"><i class="fas fa-star info-icon"></i>Keunggulan Produk</h2>
-            <ul class="features-list">
-                <li><i class="fas fa-check-circle"></i>Topi Anti Matahari Untuk Wanita Topi Pinggiran Lebar</li><li><i class="fas fa-check-circle"></i>Menutupi Seluruh Wajah dan Adem saat di pakai</li><li><i class="fas fa-check-circle"></i>Sangat cocok di Pakai Saat Umbroh dan Haji</li>
-            </ul>
-        </div>
-    </section>
-        
-    <section class="section container">
-        <div class="info-card">
-            <h2 class="section-title"><i class="fas fa-ruler-combined info-icon"></i>Detail Ukuran & Spesifikasi</h2>
-            <div class="specs-box"><pre>Bahan   : Polyaster
-Ukuran  : 56-60cm
-Gender  : Wanita Dewasa</pre></div>
-        </div>
-    </section>
-        
-    <section class="featured-gallery-section">
-        <div class="container">
-            <h2 class="section-title">Galeri Unggulan</h2>
-            <div class="gallery-grid" data-template="default">
-                
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdwv-mdms4m4bsaske9.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/sg-11134201-7rdwv-mdms4m4bsaske9.webp', false)">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdx5-mdms4mir5uck50.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/sg-11134201-7rdx5-mdms4mir5uck50.webp', false)">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvw-mdms4mvso5wkb8.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/sg-11134201-7rdvw-mdms4mvso5wkb8.webp', false)">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/sg-11134201-824i0-mei4ivy2zuo047.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/sg-11134201-824i0-mei4ivy2zuo047.webp', false)">
-        </div>
-    
-        <div class="gallery-item">
-            <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdyg-mdms4lq6blqs76.webp" alt="Featured Gallery Image" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/sg-11134201-7rdyg-mdms4lq6blqs76.webp', false)">
-        </div>
-    
-            </div>
-        </div>
-    </section>
-    
-        <section class="testimonials-section"><h2 class="section-title">Ulasan Pelanggan</h2><div class="testimonials-grid">
+        <section class="section testimonial-section"><div class="container animate-on-scroll"><h2 class="section-title">Kata Mereka Tentang Produk Kami</h2><div class="testimonial-grid">
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/04/03/c1/0403c15bbb473a3eb0e98fff4b88e0e2.jpg" alt="Customer 1" class="testimonial-avatar" loading="lazy">
+                <img src="https://i.pinimg.com/736x/21/99/58/2199588eac3ba7e5548c3cc8fcfd9b21.jpg" alt="ima" class="testimonial-avatar">
                 <div>
-                    <p class="testimonial-name">Customer 1</p>
-                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-                </div>
-            </div>
-            <p class="testimonial-text">"Produknya bagus banget!"</p>
-            <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98r-lvlffo6583qq67.webp" alt="Review media" class="testimonial-media" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7r98r-lvlffo6583qq67.webp', false)">
-        </div>
-        <div class="testimonial-card">
-            <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/ca/07/09/ca07097de9245bcbdd52686cd1ad932e.jpg" alt="alouhy" class="testimonial-avatar" loading="lazy">
-                <div>
-                    <p class="testimonial-name">alouhy</p>
+                    <p class="testimonial-name">ima</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">"Sangat memuaskan."</p>
-            <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98w-lvhde4wqheytd2.webp" alt="Review media" class="testimonial-media" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7r98w-lvhde4wqheytd2.webp', false)">
+            <p class="testimonial-text">Baru pertama x beli di toko ini sangat puas ukuran nya pas di pakai 
+Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
+            
+            <div class="testimonial-media-grid">
+                <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98o-lx7o21157ybu5e.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)">
+            </div>
+            
         </div>
+    
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/43/6b/30/436b30945955ec8bea9c4a80eb486557.jpg" alt="amel" class="testimonial-avatar" loading="lazy">
+                <img src="https://i.pinimg.com/736x/ca/07/09/ca07097de9245bcbdd52686cd1ad932e.jpg" alt="amel" class="testimonial-avatar">
                 <div>
                     <p class="testimonial-name">amel</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">"Recommended seller!"</p>
-            <video src="https://down-bs-id.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6ke1c-lvu9szntt9wb36.16000051716894603.mp4" class="testimonial-media" onclick="window.openLightbox('https://down-bs-id.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6ke1c-lvu9szntt9wb36.16000051716894603.mp4', true)" muted playsinline loop></video>
+            <p class="testimonial-text">BB aku 65 kg, Tinggi 165 cm aku pesen 2 ukuran XL/XXL dan X</p>
+            
+            <div class="testimonial-media-grid">
+                <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasg-m4sx8y8rrtn703.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)">
+            </div>
+            
         </div>
+    
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/0c/29/32/0c2932e0e226da87256b40ffbeaed302.jpg" alt="mita" class="testimonial-avatar" loading="lazy">
+                <img src="https://i.pinimg.com/736x/04/03/c1/0403c15bbb473a3eb0e98fff4b88e0e2.jpg" alt="siska" class="testimonial-avatar">
                 <div>
-                    <p class="testimonial-name">mita</p>
+                    <p class="testimonial-name">siska</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">"ini mah recommended bgt dengan harga affordable udah dapat kualitas yang wawww. baru beli satuuu tapi pingin repurchase lagii wkwk
-"</p>
-            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rase-m5ye7gbvui9y55.webp" alt="Review media" class="testimonial-media" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7rase-m5ye7gbvui9y55.webp', false)">
+            <p class="testimonial-text">Bahanya nya ngak tebal ngak tipis juga ngak ambil yg xs ternyta ngak terlalu ngepress jdi cuma pas aja, bukan seperti pke korset bb54 tb 160
+</p>
+            
+            <div class="testimonial-media-grid">
+                <img src="https://down-id.img.susercontent.com/file/id-11134103-7ras8-m4a1186lbkwp82.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)">
+            </div>
+            
         </div>
+    
         <div class="testimonial-card">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/85/a3/64/85a364903e1a59cfedd68e1dc32f202b.jpg" alt="ami" class="testimonial-avatar" loading="lazy">
+                <img src="https://i.pinimg.com/736x/43/6b/30/436b30945955ec8bea9c4a80eb486557.jpg" alt="fila" class="testimonial-avatar">
                 <div>
-                    <p class="testimonial-name">ami</p>
+                    <p class="testimonial-name">fila</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">"Bagus banget celananya size juga sesuai sama aku ❤️❤️❤️❤️❤️
-"</p>
-            <img src="https://down-id.img.susercontent.com/file/id-11134103-7rash-m17zmyf0awuq63.webp" alt="Review media" class="testimonial-media" loading="lazy" onclick="window.openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7rash-m17zmyf0awuq63.webp', false)">
-        </div></div></section>
+            <p class="testimonial-text">https://down-id.img.susercontent.com/file/id-11134103-7r992-lrrgpsd7inax20.webp</p>
+            
+            <div class="testimonial-media-grid">
+                <img src="Mantaaabbbb beuhh syukaa banget enaken bikin langsing bb ku 85 yah aku fikir bakal mengkerut ternyata engga, jdi pengen beli lagi , next order lagi yaa sukses selalu" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)">
+            </div>
+            
+        </div>
+    </div></div></section>
+
+        <section id="order" class="section"><div class="container animate-on-scroll"><div class="order-container"><h2 class="section-title">Form Pemesanan</h2>
+    <div id="urgency-timer-container">
+        <h4 id="urgency-headline">Penawaran Spesial Berakhir Dalam</h4>
+        <div id="urgency-timer">
+            <div class="timer-box"><span id="timer-days">00</span><small>Hari</small></div>
+            <div class="timer-box"><span id="timer-hours">00</span><small>Jam</small></div>
+            <div class="timer-box"><span id="timer-minutes">00</span><small>Menit</small></div>
+            <div class="timer-box"><span id="timer-seconds">00</span><small>Detik</small></div>
+        </div>
+        <p id="urgency-end-message" style="display: none;">Sayang sekali, penawaran telah berakhir!</p>
+    </div>
+    <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-9690" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-9690', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div></div></section>
         
-        <section id="order" class="section"><div class="container"><div class="order-container"><h2 class="section-title">Promo Terbatas Hari Ini!</h2>
-        <div class="order-form-header">
-            <img id="order-form-product-image" src="https://down-id.img.susercontent.com/file/id-11134207-7ra0r-mdflq5gmqvt881@resize_w450_nl.webp" alt=" Celana Olahraga Yoga" class="order-product-image" />
-            <h3 id="order-form-product-title" class="order-product-title">Anda akan memesan: <strong> Celana Olahraga Yoga</strong></h3>
-        </div>
-    <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="topi-visor-lipat-wanita" data-product-id="68cda15587e00dbe810978c8" id="oo-embed-form-topi-visor-lipat-wanita-6586" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '68cda15587e00dbe810978c8', '68cda15587e00dbe810978c9', 'oo-embed-form-topi-visor-lipat-wanita-6586', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div></div></section>
     </main>
-    <footer class="footer"><div class="container"><div class="store-info-container"><span class="store-name">nexco</span><svg class="verified-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.5C17.2467 21.5 21.5 17.2467 21.5 12C21.5 6.75329 17.2467 2.5 12 2.5C6.75329 2.5 2.5 6.75329 2.5 12C2.5 17.2467 6.75329 21.5 12 21.5ZM10.2796 15.6859L16.4839 9.48166C16.8228 9.14278 16.8228 8.59152 16.4839 8.25264C16.145 7.91376 15.5938 7.91376 15.2549 8.25264L9.66509 13.8425L7.74512 11.9225C7.40624 11.5836 6.85498 11.5836 6.5161 11.9225C6.17722 12.2614 6.17722 12.8126 6.5161 13.1515L9.04071 15.6761C9.19894 15.8343 9.42171 15.9333 9.66509 15.9333C9.90847 15.9333 10.1312 15.8343 10.2895 15.6761L10.2796 15.6859Z" fill="#1DA1F2"/></svg></div><p>&copy; 2025. All Rights Reserved.</p></footer>
+    <footer class="footer"><p>&copy; 2025 nexco. All Rights Reserved.</p></footer>
     
     <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
-        <video class="lightbox-content lightbox-video" id="lightbox-video" controls playsinline></video>
     </div>
     
     <div id="social-proof-popup" class="social-proof-popup">
         <img id="social-proof-avatar" src="https://i.pravatar.cc/40" alt="Avatar" />
         <div class="social-proof-content">
             <p id="social-proof-text"></p>
-            <div id="social-proof-time" class="social-proof-time">beberapa saat lalu</div>
+            <small id="social-proof-time" class="social-proof-time">a few moments ago</small>
         </div>
-        <button class="social-proof-close">&times;</button>
     </div>
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            try {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            } catch (error) {
-                console.error('Invalid selector for smooth scroll:', targetId);
-            }
-        });
-    });
-
     
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        function selectVariant(selectedElement) {
+            const imageUrl = selectedElement.dataset.imageUrl;
+            
+            
+            const mainImage = document.getElementById('main-product-image');
+            if (mainImage) {
+                mainImage.style.opacity = 0;
+                setTimeout(() => {
+                    mainImage.src = imageUrl;
+                    mainImage.style.opacity = 1;
+                }, 300);
+            }
+            
+            
+            const variantContainer = selectedElement.parentElement;
+            variantContainer.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+            selectedElement.classList.add('active');
+        }
+
+        
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxVideo = document.getElementById('lightbox-video');
-
-        if (lightbox && lightboxImg && lightboxVideo) {
-            const closeBtn = lightbox.querySelector('.lightbox-close');
-            
-            window.openLightbox = function(src, isVideo = false) { 
-                lightbox.style.display = 'flex';
-                if (isVideo) {
-                    lightboxImg.style.display = 'none';
-                    lightboxVideo.style.display = 'block';
-                    lightboxVideo.src = src;
-                    lightboxVideo.play();
-                } else {
-                    lightboxVideo.style.display = 'none';
-                    lightboxImg.style.display = 'block';
-                    lightboxImg.src = src;
-                }
-            }
-            
-            const closeLightbox = function() { 
-                lightbox.style.display = 'none';
-                lightboxVideo.pause();
-                lightboxVideo.src = '';
-                lightboxImg.src = '';
-            }
-
-            if(closeBtn) closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    closeLightbox();
-                }
-            });
-        }
-
-        const countdownHoursEl = document.getElementById('countdown-hours');
-        const countdownMinutesEl = document.getElementById('countdown-minutes');
-        const countdownSecondsEl = document.getElementById('countdown-seconds');
+        if (lightbox) { lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); }); }
+        function openLightbox(src) { if(lightbox && lightboxImg) { lightbox.style.display = 'flex'; lightboxImg.src = src; setTimeout(() => lightbox.classList.add('visible'), 10); } }
+        function closeLightbox() { if(lightbox) { lightbox.classList.remove('visible'); setTimeout(() => lightbox.style.display = 'none', 300); } }
         
-        if (countdownHoursEl && countdownMinutesEl && countdownSecondsEl) {
-            let durationInSeconds = 3 * 3600;
 
-            const timerInterval = setInterval(() => {
-                if (durationInSeconds <= 0) {
-                    clearInterval(timerInterval);
-                    const banner = document.querySelector('.flash-sale-banner');
-                    if (banner) banner.innerHTML = '<div class="flash-sale-tag">SALE ENDED</div>';
-                    return;
-                }
-                
-                durationInSeconds--;
-
-                const hours = Math.floor(durationInSeconds / 3600);
-                const minutes = Math.floor((durationInSeconds % 3600) / 60);
-                const seconds = durationInSeconds % 60;
-
-                countdownHoursEl.textContent = String(hours).padStart(2, '0');
-                countdownMinutesEl.textContent = String(minutes).padStart(2, '0');
-                countdownSecondsEl.textContent = String(seconds).padStart(2, '0');
-            }, 1000);
-        }
-
+        
         const socialProofData = {
-            names: "Sari, Dewi, Maya, Putri, Rina, Indira, Kartika, Lestari, Permata, Vina, Dina, Anisa, Fitri, Novi, Ratna".split(',').map(s => s.trim()).filter(Boolean),
-            cities: "Jakarta, Surabaya, Bandung, Medan, Bekasi, Tangerang, Depok, Semarang, Palembang, Makassar, Yogyakarta, Malang, Bogor, Batam, Denpasar".split(',').map(s => s.trim()).filter(Boolean),
-            productName: " Celana Olahraga Yoga",
-            interval: 8000,
-            duration: 5000
+            names: "Sari, Dewi, Maya, Putri, Rina, Indira, Kartika, Lestari, Permata, Vina, Dina, Anisa, Fitri, Novi, Ratna".split(',').map(s => s.trim()), cities: "Jakarta, Surabaya, Bandung, Medan, Bekasi, Tangerang, Depok, Semarang, Palembang, Makassar, Yogyakarta, Malang, Bogor, Batam, Denpasar".split(',').map(s => s.trim()),
+            productName: "Long Sleeve Top Asymmetrical", interval: 8000, duration: 5000
         };
-
         const popup = document.getElementById('social-proof-popup');
-        
-        if (popup && socialProofData.names.length > 0 && socialProofData.cities.length > 0) {
-            const textEl = document.getElementById('social-proof-text');
-            const avatarEl = document.getElementById('social-proof-avatar');
-            const closeBtn = popup.querySelector('.social-proof-close');
+        if (popup) {
+            const textEl = document.getElementById('social-proof-text'); const timeEl = document.getElementById('social-proof-time');
             let proofTimeout, proofInterval;
-            
-            const showSocialProof = () => {
+            function showSocialProof() {
                 const randomName = socialProofData.names[Math.floor(Math.random() * socialProofData.names.length)];
                 const randomCity = socialProofData.cities[Math.floor(Math.random() * socialProofData.cities.length)];
-                
-                if (textEl) textEl.innerHTML = `${randomName} dari <strong>${randomCity}</strong> baru saja membeli <br><strong>${socialProofData.productName}</strong>`;
-                if (avatarEl) avatarEl.src = 'https://i.pravatar.cc/40' + '?u=' + Date.now();
-                
+                if(textEl) textEl.innerHTML = `<strong>${randomName}</strong> dari <strong>${randomCity}</strong> baru saja membeli produk ini`;
+                if(timeEl) timeEl.textContent = `${Math.floor(Math.random() * 15) + 1} menit lalu`;
                 popup.classList.add('show');
-                
                 clearTimeout(proofTimeout);
-                proofTimeout = setTimeout(() => popup.classList.remove('show'), socialProofData.duration);
-            };
-
-            const closeSocialProof = () => { 
-                clearTimeout(proofTimeout); 
-                clearInterval(proofInterval); 
-                popup.classList.remove('show'); 
-            };
-            
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closeSocialProof);
+                proofTimeout = setTimeout(() => { popup.classList.remove('show'); }, socialProofData.duration);
             }
-
-            // Start after a short delay
-            setTimeout(() => { 
-                showSocialProof(); 
-                proofInterval = setInterval(showSocialProof, socialProofData.interval + socialProofData.duration); 
-            }, 5000);
+            setTimeout(() => { showSocialProof(); proofInterval = setInterval(showSocialProof, socialProofData.interval); }, 3000);
         }
-
-    const accordions = document.querySelectorAll('.accordion-item');
-    accordions.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        if (header) {
-            header.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
+        
+        
+        
+        const urgencyTimerContainer = document.getElementById('urgency-timer-container');
+        if (urgencyTimerContainer) {
+            const timerEl = document.getElementById('urgency-timer'); const endMessageEl = document.getElementById('urgency-end-message');
+            const headlineEl = document.getElementById('urgency-headline');
+            const daysEl = document.getElementById('timer-days'); const hoursEl = document.getElementById('timer-hours');
+            const minutesEl = document.getElementById('timer-minutes'); const secondsEl = document.getElementById('timer-seconds');
+            const durationInMillis = ((24 * 3600) + (0 * 60) + 0) * 1000;
+            const storageKey = 'nexcoTimerEndTime_Long Sleeve Top Asymmetrical';
+            let endTime = localStorage.getItem(storageKey);
+            if (!endTime || new Date().getTime() > endTime) {
+                endTime = new Date().getTime() + durationInMillis;
+                localStorage.setItem(storageKey, endTime);
+            }
+            function updateTimer() {
+                const distance = endTime - new Date().getTime();
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    if(timerEl) timerEl.style.display = 'none'; if(headlineEl) headlineEl.style.display = 'none';
+                    if(endMessageEl) endMessageEl.style.display = 'block'; localStorage.removeItem(storageKey); return;
+                }
+                if(daysEl) daysEl.textContent = String(Math.floor(distance / 86400000)).padStart(2, '0');
+                if(hoursEl) hoursEl.textContent = String(Math.floor((distance % 86400000) / 3600000)).padStart(2, '0');
+                if(minutesEl) minutesEl.textContent = String(Math.floor((distance % 3600000) / 60000)).padStart(2, '0');
+                if(secondsEl) secondsEl.textContent = String(Math.floor((distance % 60000) / 1000)).padStart(2, '0');
+            }
+            const timerInterval = setInterval(updateTimer, 1000); updateTimer();
         }
-    });
+        
+    </script>
     
-    const sliderContainer = document.querySelector('.product-gallery-slider');
-    if (sliderContainer) {
-        const sliderWrapper = sliderContainer.querySelector('.slider-wrapper');
-        let slides = Array.from(sliderContainer.querySelectorAll('.slide'));
-        const prevBtn = document.querySelector('.slider-btn.prev');
-        const nextBtn = document.querySelector('.slider-btn.next');
-        const thumbnails = document.querySelectorAll('.thumbnail');
-        const variantBtns = document.querySelectorAll('.variant-btn[data-image-url]');
-        const productName = " Celana Olahraga Yoga";
-        let currentIndex = 0;
-        let currentVariantSlide = null; // To track the dynamically added variant slide
 
-        const updateSlides = () => {
-            slides = Array.from(sliderContainer.querySelectorAll('.slide'));
-        };
-        
-        const goToSlide = (index, scroll = false) => {
-            if (index < 0 || index >= slides.length) return;
-            sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
-            currentIndex = index;
-            updateUI();
-            if (scroll) {
-                sliderContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        };
-
-        const removeVariantSlide = () => {
-             if (currentVariantSlide) {
-                currentVariantSlide.remove();
-                currentVariantSlide = null;
-                updateSlides();
-            }
-        };
-
-        const updateUI = () => {
-            const activeSlide = slides[currentIndex];
-            if (!activeSlide) return;
-            const activeSlideSrc = activeSlide.querySelector('img, video')?.getAttribute('src');
-            
-            thumbnails.forEach((thumb) => {
-                const thumbSrc = thumb.querySelector('img')?.getAttribute('src') || thumb.querySelector('video')?.getAttribute('src');
-                thumb.classList.toggle('active', thumbSrc === activeSlideSrc);
-            });
-            
-            variantBtns.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.imageUrl === activeSlideSrc);
-            });
-
-            const orderProductImage = document.getElementById('order-form-product-image');
-            const orderProductTitle = document.getElementById('order-form-product-title');
-            if (orderProductImage && orderProductTitle) {
-                const currentVariant = Array.from(variantBtns).find(btn => btn.classList.contains('active'));
-                const variantName = currentVariant ? `; warna ${currentVariant.textContent.trim()}` : '';
-                if(activeSlideSrc) orderProductImage.src = activeSlideSrc;
-                orderProductTitle.innerHTML = `Anda akan memesan: <strong>${productName}${variantName}</strong>`;
-            }
-        };
-
-        if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-        if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-
-        thumbnails.forEach((thumb) => {
-            thumb.addEventListener('click', () => {
-                removeVariantSlide();
-                const thumbSrc = thumb.querySelector('img')?.getAttribute('src') || thumb.querySelector('video')?.getAttribute('src');
-                const slideIndex = slides.findIndex(slide => slide.querySelector('img, video')?.getAttribute('src') === thumbSrc);
-                if (slideIndex > -1) {
-                    goToSlide(slideIndex);
-                }
-            });
-        });
-
-        variantBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const imageUrl = btn.dataset.imageUrl;
-                if (!imageUrl) return;
-
-                removeVariantSlide();
-
-                // Check if this variant image is already part of the featured media
-                const existingSlideIndex = slides.findIndex(slide => slide.querySelector('img, video')?.getAttribute('src') === imageUrl);
-                if (existingSlideIndex > -1) {
-                    goToSlide(existingSlideIndex, true);
-                    return;
-                }
-
-                // If not, create and add a new slide
-                const newSlide = document.createElement('div');
-                newSlide.className = 'slide variant-slide';
-                newSlide.innerHTML = `<img src="${imageUrl}" alt="${productName} - ${e.target.textContent.trim()}" loading="lazy">`;
-                
-                sliderWrapper.appendChild(newSlide);
-                currentVariantSlide = newSlide;
-                updateSlides();
-                goToSlide(slides.length - 1, true);
-            });
-        });
-
-        // Touch/Drag functionality
-        let isDragging = false, startPos = 0, currentTranslate = 0;
-        
-        const touchStart = (e) => {
-            startPos = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-            isDragging = true;
-            sliderWrapper.style.transition = 'none';
-        };
-
-        const touchMove = (e) => {
-            if (!isDragging) return;
-            const currentPosition = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-            const diff = currentPosition - startPos;
-            currentTranslate = -currentIndex * sliderContainer.offsetWidth + diff;
-            sliderWrapper.style.transform = `translateX(${currentTranslate}px)`;
-        };
-
-        const touchEnd = (e) => {
-            if (!isDragging) return;
-            isDragging = false;
-            sliderWrapper.style.transition = 'transform 0.3s ease-out';
-            const movedBy = e.type.includes('mouse') ? e.pageX - startPos : e.changedTouches[0].clientX - startPos;
-            if (movedBy < -50 && currentIndex < slides.length - 1) {
-                currentIndex++;
-            }
-            if (movedBy > 50 && currentIndex > 0) {
-                currentIndex--;
-            }
-            goToSlide(currentIndex);
-        };
-        
-        sliderContainer.addEventListener('mousedown', touchStart);
-        sliderContainer.addEventListener('touchstart', touchStart, { passive: true });
-        sliderContainer.addEventListener('mousemove', touchMove);
-        sliderContainer.addEventListener('touchmove', touchMove, { passive: true });
-        sliderContainer.addEventListener('mouseup', touchEnd);
-        sliderContainer.addEventListener('mouseleave', touchEnd);
-        sliderContainer.addEventListener('touchend', touchEnd);
-
-        window.addEventListener('resize', () => goToSlide(currentIndex));
-        goToSlide(0);
-    }
-    });
-</script>
 </body>
 </html>
