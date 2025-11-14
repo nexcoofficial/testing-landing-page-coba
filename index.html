@@ -1,143 +1,121 @@
 
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Long Sleeve Top Asymmetrical - nexco</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
 </head>
 <style>
-     :root {
-        --primary-color: #EE4D2D; --secondary-color: #eead2d; --accent-color: #ee2d6e;
-        --heading-font: 'Montserrat', sans-serif; --body-font: 'Roboto', sans-serif;
+    :root {
+        --primary-color: #FE2C55; --secondary-color: #fe6c2c; --accent-color: #fe2cbe;
+        --heading-font: 'Montserrat', sans-serif; --body-font: 'Inter', sans-serif;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--body-font); background-color: #f5f5f5; font-size: 14px; padding-bottom: 80px; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
-    .card { background-color: #fff; border-radius: 4px; padding: 20px; margin-bottom: 15px; }
-    
-    .product-main { display: grid; grid-template-columns: 1fr; gap: 20px; }
-    .gallery-container .swiper-slide img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
-    .gallery-thumbs { margin-top: 10px; }
-    .gallery-thumbs .swiper-slide { opacity: 0.6; cursor: pointer; border: 2px solid transparent; border-radius: 4px; }
-    .gallery-thumbs .swiper-slide-thumb-active { opacity: 1; border-color: var(--accent-color); }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--body-font); background-color: #fff; color: #111; padding-bottom: 80px; }
+    .tiktok-container { max-width: 600px; margin: auto; }
+    #main-product-image { width: 100%; aspect-ratio: 1/1.2; object-fit: cover; transition: opacity 0.3s ease-in-out; }
+    .video-container { position: relative; padding-bottom: 120%; height: 0; overflow: hidden; max-width: 100%; background: #000; }
+    .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-    .product-title { font-family: var(--heading-font); font-size: 1.4rem; line-height: 1.3; margin: 0 0 10px 0; color: #333; }
-    .stats-bar { display: flex; align-items: center; gap: 15px; color: #555; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 15px; }
-    .stats-bar .rating { color: var(--accent-color); font-weight: bold; }
-    
-    .price-box { background-color: #fafafa; padding: 15px; margin: 15px 0; border-radius: 4px; }
-    .price { font-size: 1.8rem; font-weight: bold; color: var(--accent-color); }
+    .product-header { padding: 15px; }
+    .flash-sale-tag { background-color: var(--primary-color); color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+    .price { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); }
     .price .original { font-size: 1rem; text-decoration: line-through; color: #999; margin-left: 10px; }
-    .details-row { display: flex; align-items: flex-start; margin-bottom: 15px; }
-    .details-row label { color: #757575; width: 100px; flex-shrink: 0; padding-top: 5px;}
+    .product-title { font-family: var(--heading-font); font-size: 1.3rem; margin: 5px 0 10px 0; line-height: 1.4; }
+    .info-bar { display: flex; align-items: center; gap: 15px; font-size: 0.9rem; color: #555; }
+    .info-bar .rating { color: #f8c12a; } .info-bar .rating i { margin-right: 3px; }
+
+    .section-block { border-top: 8px solid #f0f2f5; padding: 15px; }
+    .section-title { font-family: var(--heading-font); font-size: 1.1rem; font-weight: bold; margin: 0 0 15px 0; }
     
+    .variants-title { font-weight: bold; margin-bottom: 10px; color: #555; }
     .variants-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-    .shopee-variant { cursor: pointer; border: 2px solid #eee; padding: 5px 10px; border-radius: 4px; min-width: 70px; text-align: center; transition: all 0.2s; }
-    .shopee-variant.active { border-color: var(--accent-color); }
-    .variant-name { font-size: 0.9rem; }
+    .tiktok-variant { cursor: pointer; }
+    .variant-thumbnail { width: 50px; height: 50px; border-radius: 4px; object-fit: cover; border: 2px solid #ddd; }
+    .tiktok-variant.active .variant-thumbnail { border-color: var(--primary-color); }
     
-    .desc-title { font-family: var(--heading-font); font-size: 1.2rem; background: #fafafa; padding: 10px 20px; margin: -20px -20px 20px -20px; }
-    
-    .sticky-cta { display: none; }
-    .testimonial-card { padding: 20px 0; border-bottom: 1px solid #f0f0f0; } .testimonial-header { display: flex; align-items: center; margin-bottom: 15px; } .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px; object-fit: cover; } .testimonial-name { font-weight: bold; font-size: 0.9rem; } .testimonial-rating { color: var(--accent-color); font-size: 0.8rem; } .testimonial-text { font-size: 0.9rem; color: #333; margin-bottom: 10px; } .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 5px; } .testimonial-media-thumb { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; cursor: pointer; }
+    .sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; padding: 10px 15px; z-index: 10; max-width: 600px; margin: auto; }
+    .cta-button { display: block; width: 100%; text-align:center; padding: 14px; background-color: var(--accent-color); color: #ffffff; border: none; font-size: 1.1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; }
+    .cta-button .price-info { font-size: 0.8rem; opacity: 0.9; display: block; }
+
+    .testimonial-card { padding: 15px 0; border-bottom: 1px solid #f0f0f0; } .testimonial-header { display: flex; align-items: center; margin-bottom: 10px; } .testimonial-avatar { width: 35px; height: 35px; border-radius: 50%; margin-right: 10px; } .testimonial-name { font-weight: bold; font-size: 0.9rem; } .testimonial-rating { color: #f8c12a; font-size: 0.8rem; margin-top: 2px; } .testimonial-text { font-size: 0.95rem; color: #111; margin-bottom: 10px; } .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 5px; } .testimonial-media-thumb { width: 65px; height: 65px; object-fit: cover; border-radius: 4px; cursor: pointer; }
     .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; } .lightbox.visible { opacity: 1; } .lightbox-content { max-width: 90vw; max-height: 80vh; transform: scale(0.9); } .lightbox.visible .lightbox-content { transform: scale(1); } .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; } .social-proof-popup { display: none; }
     
     #urgency-timer-container { 
-            text-align: left; margin: 15px 0;
+            background-color: transparent; text-align: center; margin: 20px auto;
          }
     #urgency-headline {
         font-family: var(--body-font);
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         margin: 0 0 10px 0;
         font-weight: 500;
-        color: var(--primary-color);
+        color: inherit;
     }
-    #urgency-timer { display: flex; justify-content: flex-start; gap: 8px; }
+    #urgency-timer { display: flex; justify-content: center; gap: 8px; }
     .timer-box {
-        background-color: transparent;
-        color: var(--primary-color);
-        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
+        color: #ffffff;
+        
         padding: 8px; border-radius: 5px; min-width: 50px; display: flex; flex-direction: column; align-items: center;
     }
     .timer-box span { font-family: var(--heading-font); font-size: 1.5rem; font-weight: bold; line-height: 1; }
     .timer-box small { font-size: 0.6rem; opacity: 0.8; text-transform: uppercase; }
     #urgency-end-message { font-size: 1.1rem; font-weight: bold; color: var(--accent-color); }
     
-    
-    @media (min-width: 768px) { .product-main { grid-template-columns: 450px 1fr; } }
-    @media (max-width: 767px) {
-        body { padding-bottom: 70px; }
-        .sticky-cta { display: flex; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; z-index: 100; }
-        .sticky-cta a { flex: 1; text-align: center; padding: 12px; text-decoration: none; font-weight: bold; }
-        .cta-buy { background-color: var(--accent-color); color: #ffffff; }
-    }
 </style>
 <body>
-    <div class="container">
-        <div class="card product-main">
-            <div class="gallery-container">
-                 <div class="swiper main-swiper"><div class="swiper-wrapper">
-                    <div class="swiper-slide"><div class="video-container"><video autoplay muted loop playsinline src="https://down-bs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2o-mdbbe1s5bscc92.16000081754973439.mp4"></video></div></div>
-                    <div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product Image"></div>
-                 </div></div>
-                 <div thumbsSlider="" class="swiper gallery-thumbs"><div class="swiper-wrapper">
-                    <div class="swiper-slide" style="display:flex; align-items:center; justify-content:center;"><i class="fas fa-play"></i></div>
-                    <div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Thumb"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Thumb"></div>
-                 </div></div>
+    <div class="tiktok-container">
+        <div class="media-container">
+            <div class="video-container"><video autoplay muted loop playsinline src="https://down-bs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2o-mdbbe1s5bscc92.16000081754973439.mp4"></video></div>
+        </div>
+
+        <div class="product-header">
+            <div class="flash-sale-tag">Flash Sale</div>
+            <div class="price">
+                <span class="discount">Rp 99.000</span>
+                <span class="original">Rp 250.000</span>
             </div>
-            <div class="product-details">
-                <h1 class="product-title">Long Sleeve Top Asymmetrical</h1>
-                <div class="stats-bar"><span class="rating">4.8 <i class="fas fa-star"></i></span><span>8RB Penilaian</span><span>10RB+ Terjual</span></div>
-                <div class="price-box">
-                    <span class="price original" style="font-size:1rem; color:#999;">Rp 250.000</span>
-                    <span class="price">Rp 99.000</span>
-                </div>
-                <div class="details-row"><label>Varian:</label>
+            <h1 class="product-title">Long Sleeve Top Asymmetrical</h1>
+            <div class="info-bar">
+                <span class="rating"><i class="fas fa-star"></i> 4.8</span> | <span>8.649 ulasan global</span> | <span>65.3K terjual</span>
+            </div>
+        </div>
+
+        <div class="section-block"><h2 class="section-title">Pilih Opsi</h2>
         <div class="variants-grid">
             
-                <div class="shopee-variant active" onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp">
-                    <span class="variant-name">Putih </span>
+                <div class="tiktok-variant active" onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Putih " class="variant-thumbnail">
                 </div>
             
-                <div class="shopee-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp">
-                    <span class="variant-name">Hitam </span>
+                <div class="tiktok-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Hitam " class="variant-thumbnail">
                 </div>
             
-                <div class="shopee-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp">
-                    <span class="variant-name">Abu-abu</span>
+                <div class="tiktok-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Abu-abu" class="variant-thumbnail">
                 </div>
             
         </div>
     </div>
-                <div class="details-row"><label>Pengiriman:</label><span>Dikirim dari gudang kami.</span></div>
-                
-    <div id="urgency-timer-container">
-        <h4 id="urgency-headline">Penawaran Spesial Berakhir Dalam</h4>
-        <div id="urgency-timer">
-            <div class="timer-box"><span id="timer-days">00</span><small>Hari</small></div>
-            <div class="timer-box"><span id="timer-hours">00</span><small>Jam</small></div>
-            <div class="timer-box"><span id="timer-minutes">00</span><small>Menit</small></div>
-            <div class="timer-box"><span id="timer-seconds">00</span><small>Detik</small></div>
-        </div>
-        <p id="urgency-end-message" style="display: none;">Sayang sekali, penawaran telah berakhir!</p>
-    </div>
-    
-            </div>
+        
+        <div class="section-block">
+            <h2 class="section-title">Deskripsi Produk</h2>
+            <p style="white-space: pre-wrap;">Joybasic Celana Korset mengecilan pinggang, perut, dan menaikkan bagian pantat.</p>
         </div>
         
-        <div class="card">
-            <h3 class="desc-title">Rincian Produk</h3>
-            <div style="white-space: pre-wrap;">Joybasic Celana Korset mengecilan pinggang, perut, dan menaikkan bagian pantat.</div>
-        </div>
-        
-        <div class="card"><h3 class="desc-title">Penilaian Produk</h3><div class="testimonial-grid">
+        <div class="section-block"><h2 class="section-title">Spesifikasi</h2><pre style="white-space: pre-wrap; font-family: var(--body-font);">Bahan: Nylon Premium Level A+
+
+Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman buat sehari hari</pre></div>
+
+        <div class="section-block"><h2 class="section-title">Ulasan Pelanggan</h2><div class="testimonial-grid">
         <div class="testimonial-card">
             <div class="testimonial-header">
                 <img src="https://i.pinimg.com/736x/21/99/58/2199588eac3ba7e5548c3cc8fcfd9b21.jpg" alt="ima" class="testimonial-avatar">
@@ -204,11 +182,32 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
             
         </div>
     </div></div>
-        
-        <div id="order" class="card"><h3 class="desc-title" style="text-align:center;">Formulir Pemesanan</h3><!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-9690" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-9690', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div>
+
+        <div id="order" class="section-block">
+             <h2 class="section-title" style="text-align:center;">Formulir Pemesanan</h2>
+             
+    <div id="urgency-timer-container">
+        <h4 id="urgency-headline">Penawaran Spesial Berakhir Dalam</h4>
+        <div id="urgency-timer">
+            <div class="timer-box"><span id="timer-days">00</span><small>Hari</small></div>
+            <div class="timer-box"><span id="timer-hours">00</span><small>Jam</small></div>
+            <div class="timer-box"><span id="timer-minutes">00</span><small>Menit</small></div>
+            <div class="timer-box"><span id="timer-seconds">00</span><small>Detik</small></div>
+        </div>
+        <p id="urgency-end-message" style="display: none;">Sayang sekali, penawaran telah berakhir!</p>
+    </div>
+    
+             <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-9690" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-9690', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
+        </div>
     </div>
 
-    <div class="sticky-cta"><a href="#order" class="cta-buy">Beli Sekarang</a></div>
+    <div class="sticky-footer">
+        <a href="#order" class="cta-button">
+            Belanja Sekarang
+            <span class="price-info">Rp 99.000</span>
+        </a>
+    </div>
+    
     
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -232,14 +231,13 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
             const imageUrl = selectedElement.dataset.imageUrl;
             
             
-            if (window.gallerySwiper) {
-                const slideIndex = Array.from(window.gallerySwiper.slides).findIndex(slide => {
-                    const img = slide.querySelector('img');
-                    return img && img.src === imageUrl;
-                });
-                if (slideIndex > -1) {
-                    window.gallerySwiper.slideTo(slideIndex);
-                }
+            const mainImage = document.getElementById('main-product-image');
+            if (mainImage) {
+                mainImage.style.opacity = 0;
+                setTimeout(() => {
+                    mainImage.src = imageUrl;
+                    mainImage.style.opacity = 1;
+                }, 300);
             }
             
             
@@ -308,13 +306,7 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
         }
         
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const thumbsSwiper = new Swiper(".gallery-thumbs", { spaceBetween: 10, slidesPerView: 'auto', freeMode: true, watchSlidesProgress: true });
-        window.gallerySwiper = new Swiper(".main-swiper", { spaceBetween: 10, thumbs: { swiper: thumbsSwiper } });
-    });
-    </script>
 </body>
 </html>
