@@ -6,79 +6,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Long Sleeve Top Asymmetrical - nexco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <style>
     :root {
-        --primary-color: #222222; --secondary-color: #222222; --accent-color: #222222;
-        --heading-font: 'Poppins', sans-serif; --body-font: 'Inter', sans-serif;
-        --text-color: #333; --bg-color: #ffffff; --light-bg-color: #f8f9fa;
+        --primary-color: #000000; --secondary-color: #000000; --accent-color: #000000;
+        --heading-font: 'Playfair Display', sans-serif; --body-font: 'Lato', sans-serif;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: var(--body-font); color: var(--text-color); line-height: 1.7; background-color: var(--bg-color); }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 60px 0; }
-    .section-title { font-family: var(--heading-font); font-size: 2.5rem; text-align: center; color: var(--primary-color); margin-bottom: 50px; }
-    .btn { display: inline-block; padding: 15px 35px; background-color: var(--accent-color); color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-    .btn:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); filter: brightness(1.1); }
-    .hero { background-color: var(--light-bg-color); padding: 80px 0; }
-    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
-    .hero-text h1 { font-family: var(--heading-font); font-size: 2.8rem; color: var(--primary-color); line-height: 1.2; margin: 0 0 20px 0; }
-    .hero-text p { font-size: 1.1rem; max-width: 500px; margin-bottom: 30px; }
-    .hero-image { box-shadow: 0 15px 40px rgba(0,0,0,0.15); border-radius: 12px; }
-    #main-product-image { transition: opacity 0.3s ease-in-out; border-radius: 12px; }
+    body { margin: 0; font-family: var(--body-font); color: #333; background-color: #fff; line-height:1.8; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
     
-    .price { margin: 20px 0; font-size: 1.5rem; }
+    .main-product-section { padding: 40px 0; }
+    .main-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: flex-start; }
+    .product-info h1 { font-family: var(--heading-font); font-size: 2.5rem; color: var(--primary-color); }
+    .price { margin: 15px 0; font-size: 1.5rem; }
     .price .original { text-decoration: line-through; color: #888; margin-right: 10px; }
     .price .discount { font-weight: bold; color: var(--primary-color); font-size: 2rem; }
-
-    .variants-title { font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 10px; font-size: 1.1rem; }
+    .btn { display: inline-block; width: 100%; text-align: center; padding: 18px; background-color: var(--accent-color); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.3s ease; font-size: 1.1rem; }
+    .btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+    
+    .variants-title { font-weight: bold; margin-bottom: 10px; color: #555; }
     .variants-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .default-variant { cursor: pointer; text-align: center; }
-    .variant-thumbnail { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 3px solid #eee; transition: all 0.3s ease; }
-    .default-variant:hover .variant-thumbnail { border-color: var(--secondary-color); }
-    .default-variant.active .variant-thumbnail { border-color: var(--accent-color); transform: scale(1.1); }
+    .shopify-variant { cursor: pointer; }
+    .variant-thumbnail { width: 50px; height: 50px; border-radius: 8px; object-fit: cover; border: 2px solid #ddd; transition: all 0.3s ease; }
+    .shopify-variant:hover .variant-thumbnail { border-color: var(--secondary-color); }
+    .shopify-variant.active .variant-thumbnail { border-color: var(--accent-color); box-shadow: 0 0 0 2px var(--accent-color); }
     
-    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 12px; margin-top: 30px; }
-    .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-    .product-details-section { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
-    .product-details-section h4 { font-family: var(--heading-font); color: var(--primary-color); margin-bottom: 10px; }
-    .product-details-section pre { white-space: pre-wrap; background-color: var(--light-bg-color); padding: 15px; border-radius: 8px; font-family: var(--body-font); line-height: 1.6; }
+    .trust-badges { display: flex; gap: 15px; margin-top: 30px; align-items: center; flex-wrap: wrap; border-top: 1px solid #eee; padding-top: 20px; }
+    .badge { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #555; }
+    .badge .icon { font-size: 1.2rem; color: var(--primary-color); }
 
-    .testimonial-section { background-color: var(--light-bg-color); }
+    .content-section { padding: 60px 0; border-top: 1px solid #f0f0f0; }
+    .content-section h2 { font-family: var(--heading-font); font-size: 2rem; color: var(--primary-color); text-align: center; margin-bottom: 40px;}
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 12px; margin: auto; max-width: 800px; }
+    .video-container iframe, .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+    .testimonial-section { background-color: #f9f9f9; }
     .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-    .testimonial-card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
-    .testimonial-header { display: flex; align-items: center; margin-bottom: 15px; }
-    .testimonial-avatar { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover; }
-    .testimonial-name { font-weight: bold; } .testimonial-rating { color: #ffc107; }
-    .testimonial-text { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
-    .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-    .testimonial-media-thumb { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
-    .testimonial-media-thumb:hover { transform: scale(1.05); }
+    .testimonial-card, .faq-item { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+    .testimonial-header { display: flex; align-items: center; margin-bottom: 15px; } .testimonial-avatar { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; object-fit: cover; } .testimonial-name { font-weight: bold; } .testimonial-rating { color: #ffc107; } .testimonial-text { font-size: 0.95rem; color: #555; margin-bottom: 15px; } .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 8px; } .testimonial-media-thumb { width: 70px; height: 70px; object-fit: cover; border-radius: 8px; cursor: pointer; }
+
+    .order-section { padding: 60px 0; }
+    .order-form-container { background: #f9f9f9; padding: 30px; border-radius: 12px; max-width: 600px; margin: auto; }
     
-    .order-container { max-width: 700px; margin: auto; background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .footer { background-color: var(--primary-color); color: #ffffff; text-align: center; padding: 40px 0; }
-    .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
-    .lightbox.visible { opacity: 1; }
-    .lightbox-content { max-width: 90vw; max-height: 80vh; transform: scale(0.9); transition: transform 0.3s ease; }
-    .lightbox.visible .lightbox-content { transform: scale(1); }
-    .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; }
-    
-    .social-proof-popup { position: fixed; bottom: -100px; left: 15px; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); color: white; padding: 12px 16px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); display: flex; align-items: center; z-index: 999; transition: transform 0.5s ease-in-out; }
-    .social-proof-popup.show { transform: translateY(-115px); }
-    .social-proof-popup img { width: 40px; height: 40px; border-radius: 50%; margin-right: 12px; }
-    .social-proof-content p { margin: 0; font-size: 0.85rem; line-height: 1.3; }
-    .social-proof-content small { font-size: 0.7rem; opacity: 0.7; }
-    
+    .gallery-container .swiper-slide img { width: 100%; height: auto; cursor: pointer; }
+    .gallery-thumbs { margin-top: 10px; }
+    .gallery-thumbs .swiper-slide { opacity: 0.5; cursor: pointer; }
+    .gallery-thumbs .swiper-slide-thumb-active { opacity: 1; border: 2px solid var(--accent-color); border-radius: 8px; }
+
+    .faq-item summary { font-weight: bold; cursor: pointer; list-style: none; } .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item div { padding-top: 10px; }
+
     .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+    .social-proof-popup, .lightbox { display:none; } /* Disabled for this template */
     
     #urgency-timer-container { 
-            background-color: rgba(0,0,0,0.05); text-align: center; padding: 15px; border-radius: 8px; margin: 20px auto;
+            background-color: transparent; text-align: center; margin: 20px auto;
          }
     #urgency-headline {
         font-family: var(--body-font);
@@ -98,68 +87,71 @@
     .timer-box small { font-size: 0.6rem; opacity: 0.8; text-transform: uppercase; }
     #urgency-end-message { font-size: 1.1rem; font-weight: bold; color: var(--accent-color); }
     
-    @media (min-width: 768px) {
-        .hero-grid { grid-template-columns: 1fr 1fr; }
-        .hero-text h1 { font-size: 3.5rem; }
-    }
+    
+    @media (min-width: 992px) { .main-grid { grid-template-columns: 1.2fr 1fr; } .product-info h1 { font-size: 3rem; } }
 </style>
 <body>
-    <header class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text animate-on-scroll">
+    <main class="container">
+        <section class="main-product-section">
+            <div class="main-grid">
+                <div class="gallery-container animate-on-scroll">
+                     <div class="swiper main-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="video-container"><video autoplay muted loop playsinline src="https://down-bs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2o-mdbbe1s5bscc92.16000081754973439.mp4"></video></div></div>
+                            <div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product Image"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product Image"></div>
+                        </div>
+                        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="swiper gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><i class="fas fa-play" style="font-size: 30px; text-align:center; width:100%; padding: 10px;"></i></div>
+                            <div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product Thumbnail"></div><div class="swiper-slide"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product Thumbnail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-info animate-on-scroll">
                     <h1>Long Sleeve Top Asymmetrical</h1>
-                    <p>anti bakteri</p>
                     <div class="price">
                         <span class="original">Rp 250.000</span><span class="discount">Rp 99.000</span>
                     </div>
-                    <a href="#order" class="btn" style="margin-top:20px;">Pesan Sekarang</a>
-                </div>
-                <div class="animate-on-scroll">
-                    <img id="main-product-image" src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Long Sleeve Top Asymmetrical" class="hero-image">
-                    <div class="color-variants-container"><h4 class="variants-title">Pilih Varian:</h4>
+                    <div style="white-space: pre-wrap;">Joybasic Celana Korset mengecilan pinggang, perut, dan menaikkan bagian pantat.</div>
+                    <div style="margin: 25px 0;"><h4 class="variants-title">Pilih Varian:</h4>
         <div class="variants-grid">
             
-                <div class="default-variant active" onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp">
+                <div class="shopify-variant active" onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp">
                     <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Putih " class="variant-thumbnail">
                 </div>
             
-                <div class="default-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp">
+                <div class="shopify-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp">
                     <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Hitam " class="variant-thumbnail">
                 </div>
             
-                <div class="default-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp">
+                <div class="shopify-variant " onclick="selectVariant(this)" data-image-url="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp">
                     <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Abu-abu" class="variant-thumbnail">
                 </div>
             
         </div>
     </div>
+                    <a href="#order" class="btn" style="margin-top:20px">Pesan Sekarang</a>
+                    <div class="trust-badges">
+                        <div class="badge"><span class="icon"><i class="fas fa-shield-alt"></i></span> <span>Pembayaran Aman</span></div>
+                        <div class="badge"><span class="icon"><i class="fas fa-truck-fast"></i></span> <span>Pengiriman Cepat</span></div>
+                        <div class="badge"><span class="icon"><i class="fas fa-box-open"></i></span> <span>Garansi Produk</span></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <section class="section container animate-on-scroll">
-            <h2 class="section-title">Detail Produk</h2>
-            <div style="text-align:center; max-width: 700px; margin: -30px auto 40px auto; white-space: pre-wrap;">Joybasic Celana Korset mengecilan pinggang, perut, dan menaikkan bagian pantat.</div>
-            <div class="video-container"><video autoplay muted loop playsinline src="https://down-bs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2o-mdbbe1s5bscc92.16000081754973439.mp4"></video></div>
-            <div class="product-details-section"><h4>Spesifikasi Produk</h4><pre>Bahan: Nylon Premium Level A+
-
-Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman buat sehari hari</pre></div>
-            <div class="product-details-section"><h4>Tabel Ukuran</h4><pre>Ukuran: XS-XXXL
-
-XS/S : 40 - 50 kg
-
-M/L :50 - 60 kg
-
-XL/2XL : 60 -70 kg
-
-XXXL : 70 - 90 kg</pre></div>
         </section>
 
-        <section class="section container animate-on-scroll"><h2 class="section-title">Galeri Produk</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product gallery image" style="border-radius: 8px;"><img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product gallery image" style="border-radius: 8px;"></div></section>
-        
-        <section class="section testimonial-section"><div class="container animate-on-scroll"><h2 class="section-title">Kata Mereka Tentang Produk Kami</h2><div class="testimonial-grid">
+        <section class="content-section animate-on-scroll">
+            <h2>FAQ (Tanya Jawab)</h2>
+            <div style="max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+                <details class="faq-item"><summary>Apakah produk ini ready stock?</summary><div><p>Tentu! Semua produk yang bisa Anda lihat di sini ready stock dan siap kirim.</p></div></details>
+                <details class="faq-item"><summary>Berapa lama proses pengiriman?</summary><div><p>Pengiriman biasanya memakan waktu 2-4 hari kerja untuk wilayah Jabodetabek dan 3-7 hari untuk luar Jabodetabek.</p></div></details>
+                <details class="faq-item"><summary>Apakah ada garansi?</summary><div><p>Ya, kami memberikan garansi 100% uang kembali jika produk yang Anda terima tidak sesuai deskripsi atau mengalami kerusakan.</p></div></details>
+            </div>
+        </section>
+
+        <section class="content-section testimonial-section animate-on-scroll"><h2>Ulasan Pelanggan</h2><div class="testimonial-grid" style="max-width: 1200px; margin: auto;">
         <div class="testimonial-card">
             <div class="testimonial-header">
                 <img src="https://i.pinimg.com/736x/21/99/58/2199588eac3ba7e5548c3cc8fcfd9b21.jpg" alt="ima" class="testimonial-avatar">
@@ -225,9 +217,12 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
             </div>
             
         </div>
-    </div></div></section>
-
-        <section id="order" class="section"><div class="container animate-on-scroll"><div class="order-container"><h2 class="section-title">Form Pemesanan</h2>
+    </div></section>
+        
+        <section id="order" class="order-section animate-on-scroll">
+            <div class="order-form-container">
+                <h2 style="text-align: center; margin-bottom: 20px;">Formulir Pemesanan</h2>
+                
     <div id="urgency-timer-container">
         <h4 id="urgency-headline">Penawaran Spesial Berakhir Dalam</h4>
         <div id="urgency-timer">
@@ -238,22 +233,15 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
         </div>
         <p id="urgency-end-message" style="display: none;">Sayang sekali, penawaran telah berakhir!</p>
     </div>
-    <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-9690" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-9690', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code --></div></div></section>
-        
+    
+                <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-9690" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-9690', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
+            </div>
+        </section>
     </main>
-    <footer class="footer"><p>&copy; 2025 nexco. All Rights Reserved.</p></footer>
     
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
-    </div>
-    
-    <div id="social-proof-popup" class="social-proof-popup">
-        <img id="social-proof-avatar" src="https://i.pravatar.cc/40" alt="Avatar" />
-        <div class="social-proof-content">
-            <p id="social-proof-text"></p>
-            <small id="social-proof-time" class="social-proof-time">a few moments ago</small>
-        </div>
     </div>
     
     <script>
@@ -273,13 +261,14 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
             const imageUrl = selectedElement.dataset.imageUrl;
             
             
-            const mainImage = document.getElementById('main-product-image');
-            if (mainImage) {
-                mainImage.style.opacity = 0;
-                setTimeout(() => {
-                    mainImage.src = imageUrl;
-                    mainImage.style.opacity = 1;
-                }, 300);
+            if (window.gallerySwiper) {
+                const slideIndex = Array.from(window.gallerySwiper.slides).findIndex(slide => {
+                    const img = slide.querySelector('img');
+                    return img && img.src === imageUrl;
+                });
+                if (slideIndex > -1) {
+                    window.gallerySwiper.slideTo(slideIndex);
+                }
             }
             
             
@@ -348,7 +337,27 @@ Sangat bermanfaat kalo mau pake dress jadi kelihatan kecil perutnya..</p>
         }
         
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const thumbsSwiper = new Swiper(".gallery-thumbs", {
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        window.gallerySwiper = new Swiper(".main-swiper", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: thumbsSwiper,
+            },
+        });
+    });
+    </script>
 </body>
 </html>
