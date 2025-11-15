@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joybasic Women's Celana Korset - nexco</title>
+    <title>Long Sleeve Top Asymmetrical - ayunda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
@@ -23,218 +23,260 @@
     body { margin: 0; font-family: var(--body-font); background-color: #fff; color: #111; padding-bottom: 80px; }
     .tiktok-container { max-width: 600px; margin: auto; }
     
-    .gallery-container .swiper-slide img { width: 100%; aspect-ratio: 1/1.2; object-fit: cover; }
-    .video-container-swiper { position: relative; width: 100%; height: 0; padding-bottom: 120%;}
-    .video-container-swiper iframe, .video-container-swiper video { position: absolute; top:0; left:0; width:100%; height:100%; }
+    .header { display: flex; justify-content: space-between; align-items: center; padding: 15px; position: absolute; top: 0; left: 0; right: 0; z-index: 10; color: white; background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent); }
+    .header .icons { display:flex; gap: 15px; }
 
-    .product-header { padding: 15px; }
-    .flash-sale-tag { background-color: var(--primary-color); color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+    .gallery-container .main-swiper { height: 70vh; background: #000; }
+    .gallery-container .swiper-slide img { width: 100%; height: 100%; object-fit: cover; background-color: #eee; }
+    .video-container-swiper { position: absolute; top:0; left:0; width:100%; height:100%; }
+    .video-container-swiper iframe, .video-container-swiper video { width:100%; height:100%; object-fit: cover; }
+    .tiktok-thumbnails { display: flex; gap: 5px; padding: 10px; overflow-x: auto; }
+    .tiktok-thumb-item { width: 60px; height: 60px; border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+    .tiktok-thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+    .tiktok-thumb-video { display:flex; align-items:center; justify-content:center; background-color:#eee; }
+
+    .product-info-section { padding: 15px; }
+    .flash-sale-tag { background-color: var(--primary-color); color: #ffffff; padding: 4px 10px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; display: inline-block; }
+    .price-box { display:flex; align-items:center; gap:10px; margin: 10px 0; }
     .price { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); }
-    .price .original { font-size: 1rem; text-decoration: line-through; color: #999; margin-left: 10px; }
+    .original { text-decoration: line-through; color: #999; }
     .product-title { font-family: var(--heading-font); font-size: 1.3rem; margin: 5px 0 10px 0; line-height: 1.4; }
-    .info-bar { display: flex; align-items: center; gap: 15px; font-size: 0.9rem; color: #555; flex-wrap: wrap; }
-    .info-bar .rating { color: #f8c12a; } .info-bar .rating i { margin-right: 3px; }
+    .info-bar { display: flex; align-items: center; gap: 15px; font-size: 0.9rem; color: #555; }
+    .info-bar .rating { color: #f8c12a; } .info-bar .rating::before { content: '★'; margin-right: 4px; }
 
     .section-block { border-top: 8px solid #f0f2f5; padding: 15px; }
     .section-title { font-family: var(--heading-font); font-size: 1.1rem; font-weight: bold; margin: 0 0 15px 0; }
     
-    .variants-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tiktok-variant { cursor: pointer; }
-    .variant-thumbnail { width: 50px; height: 50px; border-radius: 4px; object-fit: cover; border: 2px solid #ddd; transition: border-color 0.2s; }
-    .tiktok-variant.active .variant-thumbnail, .tiktok-variant:hover .variant-thumbnail { border-color: var(--primary-color); }
+    .variants-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tiktok-variant { cursor: pointer; border: 2px solid #eee; border-radius: 6px; overflow:hidden; }
+    .variant-thumbnail { width: 60px; height: 60px; object-fit: cover; background-color: #eee; }
+    .tiktok-variant.active { border-color: var(--primary-color); }
     
-    .sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; padding: 10px 15px; z-index: 10; max-width: 600px; margin: auto; }
-    .cta-button { display: block; width: 100%; text-align:center; padding: 14px; background-color: var(--accent-color); color: #ffffff; border: none; font-size: 1.1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; }
-    .cta-button .price-info { font-size: 0.8rem; opacity: 0.9; display: block; }
-
-    .testimonial-card { padding: 15px 0; border-bottom: 1px solid #f0f0f0; } .testimonial-header { display: flex; align-items: center; margin-bottom: 10px; } .testimonial-avatar { width: 35px; height: 35px; border-radius: 50%; margin-right: 10px; } .testimonial-name { font-weight: bold; font-size: 0.9rem; } .testimonial-rating { color: #f8c12a; font-size: 0.8rem; margin-top: 2px; } .testimonial-text { font-size: 0.95rem; color: #111; margin-bottom: 10px; } .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 5px; } .testimonial-media-thumb { width: 65px; height: 65px; object-fit: cover; border-radius: 4px; cursor: pointer; }
-    .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; } .lightbox.visible { opacity: 1; } .lightbox-content { max-width: 90vw; max-height: 80vh; transform: scale(0.9); transition: transform 0.3s ease; } .lightbox.visible .lightbox-content { transform: scale(1); } .lightbox-close { position: absolute; top: 15px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; } .social-proof-popup { display: none; }
+    .sticky-footer { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #eee; padding: 10px 15px; z-index: 10; max-width: 600px; margin: auto; display: flex; gap: 10px; }
+    .cta-button { flex:1; text-align:center; padding: 14px; border: none; font-size: 1.1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; }
+    .btn-addcart { background-color: #f0f2f5; color: #111; }
+    .btn-buynow { background-color: var(--accent-color); color: #ffffff; }
     
-    #urgency-timer-container { 
-            background-color: transparent; text-align: center; margin: 20px auto;
-         }
-    #urgency-headline {
-        font-family: var(--body-font);
-        font-size: 0.9rem;
-        margin: 0 0 10px 0;
-        font-weight: 500;
-        color: inherit;
-    }
-    #urgency-timer { display: flex; justify-content: center; gap: 8px; }
-    .timer-box {
-        background-color: var(--primary-color);
-        color: #ffffff;
-        
-        padding: 8px; border-radius: 5px; min-width: 50px; display: flex; flex-direction: column; align-items: center;
-    }
-    .timer-box span { font-family: var(--heading-font); font-size: 1.5rem; font-weight: bold; line-height: 1; }
-    .timer-box small { font-size: 0.6rem; opacity: 0.8; text-transform: uppercase; }
-    #urgency-end-message { font-size: 1.1rem; font-weight: bold; color: var(--accent-color); }
-    
+    .tiktok-testimonial-card { padding: 15px 0; border-bottom: 1px solid #f0f0f0; } .testimonial-header { display: flex; align-items: center; margin-bottom: 10px; } .testimonial-avatar { width: 35px; height: 35px; border-radius: 50%; margin-right: 10px; } .testimonial-name { font-weight: bold; font-size: 0.9rem; } .testimonial-rating { color: #f8c12a; font-size: 0.8rem; margin-top: 2px; } .testimonial-text { font-size: 0.95rem; color: #111; margin-bottom: 10px; } .testimonial-media-grid { display: flex; flex-wrap: wrap; gap: 5px; } .testimonial-media-thumb { width: 65px; height: 65px; object-fit: cover; border-radius: 4px; cursor: pointer; }
+    .lightbox, .social-proof-popup { display: none; }
 </style>
 <body>
     <div class="tiktok-container">
+        <header class="header">
+            <i class="fas fa-arrow-left"></i>
+            <div class="icons"><i class="fas fa-shopping-cart"></i><i class="fas fa-user"></i></div>
+        </header>
         
-        <div class="gallery-container">
+        <div class="gallery-container tiktok-gallery">
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
                     
-        <div class="swiper-slide" data-type="video">
-            <div class="video-container-swiper"><video autoplay muted loop playsinline src="https://down-zl-sg.vod.susercontent.com/api/v4/11110107/mms/id-11110107-6ke14-m2gfpqavmsf63c.16003961749599539.mp4"></video></div>
-        </div>
-    
-                    
-        <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7rbk8-mai1dkmzu454c5.webp">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk8-mai1dkmzu454c5.webp" alt="Product image for Joybasic Women's Celana Korset" loading="lazy">
-        </div>
-    
-        <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7r98q-lmyamvxsw1wr34.webp">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-lmyamvxsw1wr34.webp" alt="Product image for Joybasic Women's Celana Korset" loading="lazy">
-        </div>
-    
-        <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lmyamvxsuncbed.webp">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lmyamvxsuncbed.webp" alt="Product image for Joybasic Women's Celana Korset" loading="lazy">
-        </div>
-    
-        <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2as3iahs51m0e.webp">
-            <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2as3iahs51m0e.webp" alt="Product image for Joybasic Women's Celana Korset" loading="lazy">
-        </div>
-    
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+                <div class="swiper-slide" data-type="video">
+                    <div class="video-container-swiper"><video autoplay muted loop playsinline src="https://down-bs-sg.vod.susercontent.com/api/v4/11110105/mms/id-11110105-6ko2o-mdbbe1s5bscc92.16000081754973439.mp4"></video></div>
                 </div>
-                
+            
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+            <div class="swiper-slide" data-type="image" data-image-source="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product image for Long Sleeve Top Asymmetrical" loading="lazy">
+            </div>
+        
+                </div>
             </div>
             
+            <div class="tiktok-thumbnails">
+                
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdbad4w0b95z6e.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+                <div class="tiktok-thumb-item tiktok-thumb-video">
+                    <i class="fas fa-play"></i>
+                </div>
+            
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq6s395d.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0j-mdbad4w0e2av27.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq5dit2a.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjq3yyd1a.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdbbezjpycol54.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0o-mdbbezjpzr91d6.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq15tha8.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            <div class="tiktok-thumb-item">
+                <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0p-mdbbezjq2kdx57.webp" alt="Product thumbnail" loading="lazy">
+            </div>
+        
+            </div>
         </div>
     
 
-        <div class="product-header">
-            <div class="flash-sale-tag">Flash Sale</div>
-            <div class="price">
-                <span class="discount">Rp 165.000</span>
-                <span class="original">Rp 780.000</span>
+        <div class="product-info-section">
+            <div class="price-box">
+                <span class="price">Rp 99.000</span>
+                <span class="original">Rp 150.000</span>
+                <span class="flash-sale-tag">Flash Sale</span>
             </div>
-            <h1 class="product-title">Joybasic Women's Celana Korset</h1>
+            <h1 class="product-title">Long Sleeve Top Asymmetrical</h1>
             <div class="info-bar">
-                <span class="rating"><i class="fas fa-star"></i> 4.8</span> | <span>8.649 ulasan global</span> | <span>65.3K terjual</span>
+                <span class="rating">4.9</span>
+                |
+                <span>1.2k terjual</span>
             </div>
         </div>
 
-        <div class="section-block"><h2 class="section-title">Pilih Opsi</h2>
+        <div class="section-block"><h2 class="section-title">Varian</h2>
         <div class="variants-grid">
             
-                <div class="tiktok-variant active" onclick="selectVariant(this, 'https://down-id.img.susercontent.com/file/id-11134207-7r98q-lmyamvxsw1wr34.webp')" data-variant-name="  Cream">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-lmyamvxsw1wr34.webp" alt="  Cream" class="variant-thumbnail">
+                <div class="tiktok-variant active" onclick="selectVariant(this, 'https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp')" data-variant-name="Putih" title="Putih">
+                    
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdbbezjq9l85f1@resize_w450_nl.webp" alt="Putih" class="variant-thumbnail">
+        
                 </div>
             
-                <div class="tiktok-variant " onclick="selectVariant(this, 'https://down-id.img.susercontent.com/file/id-11134207-7rbk8-mai1dkmzu454c5.webp')" data-variant-name="Black">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rbk8-mai1dkmzu454c5.webp" alt="Black" class="variant-thumbnail">
+                <div class="tiktok-variant " onclick="selectVariant(this, 'https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp')" data-variant-name="Hitam" title="Hitam">
+                    
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdbbgu1olmw78b@resize_w450_nl.webp" alt="Hitam" class="variant-thumbnail">
+        
+                </div>
+            
+                <div class="tiktok-variant " onclick="selectVariant(this, 'https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp')" data-variant-name="Abu-abu" title="Abu-abu">
+                    
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mdbbgu1oog13a1@resize_w450_nl.webp" alt="Abu-abu" class="variant-thumbnail">
+        
                 </div>
             
         </div>
     </div>
-        
+        <div class="section-block"><h2 class="section-title">Pengiriman</h2><p>Gratis ongkir Jabodetabek</p></div>
+
         <div class="section-block">
-            <h2 class="section-title">Deskripsi Produk</h2>
-            <p style="white-space: pre-wrap;">Hadirkan esensi keanggunan sejati dalam setiap penampilan Anda dengan Joybasic Women's Celana Korset. Dirancang untuk membentuk kontur tubuh dengan indah dan natural, ia adalah rahasia di balik siluet sempurna yang Anda dambakan.
-
-Dibuat dari material premium pilihan yang lembut di kulit, celana korset ini memastikan kenyamanan optimal sepanjang hari. Desainnya yang cermat memberikan efek merampingkan tanpa terasa membatasi, menyatu sempurna di bawah busana favorit Anda sebagai fondasi keindahan yang tak terlihat namun terasa.</p>
+            <h2 class="section-title">Deskripsi</h2>
+            <p style="white-space: pre-wrap;">Hadirkan esensi gaya kontemporer dalam setiap gerakan. Long Sleeve Top Asymmetrical kami adalah manifestasi keanggunan modern, </p>
         </div>
         
-        <div class="section-block"><h2 class="section-title">Spesifikasi</h2><pre style="white-space: pre-wrap; font-family: var(--body-font);">Bahan: Nylon Premium Level A+
-
-Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman buat sehari hari
-
-</pre></div>
-
-        <div class="section-block"><h2 class="section-title">Ulasan Pelanggan</h2><div>
-        <div class="testimonial-card">
+        <div class="section-block"><h2 class="section-title">Ulasan Pembeli</h2><div>
+        <div class="tiktok-testimonial-card ">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/43/6b/30/436b30945955ec8bea9c4a80eb486557.jpg" alt="Dewi Sartika" class="testimonial-avatar" loading="lazy">
+                <img src="https://ui-avatars.com/api/?name=Putri%20Ayu&background=random&color=fff" alt="Putri Ayu" class="testimonial-avatar" loading="lazy">
                 <div>
-                    <p class="testimonial-name">Dewi Sartika</p>
+                    <p class="testimonial-name">Putri Ayu</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">Celana korset Joybasic ini bener-bener nyaman dan bikin auto pede! Perut langsung rata seketika, suka banget!</p>
-            
-            <div class="testimonial-media-grid">
-                <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98o-lx7o21157ybu5e.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)" loading="lazy">
-            </div>
+            <p class="testimonial-text">Suka banget sama atasan lengan panjang asimetris ini! Modelnya unik dan nyaman banget dipakai.</p>
             
         </div>
     
-        <div class="testimonial-card">
+        <div class="tiktok-testimonial-card ">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/04/03/c1/0403c15bbb473a3eb0e98fff4b88e0e2.jpg" alt="Dian S." class="testimonial-avatar" loading="lazy">
+                <img src="https://ui-avatars.com/api/?name=Rina%20Lestari&background=random&color=fff" alt="Rina Lestari" class="testimonial-avatar" loading="lazy">
                 <div>
-                    <p class="testimonial-name">Dian S.</p>
+                    <p class="testimonial-name">Rina Lestari</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">Celana korset Joybasic ini nyaman banget, perut langsung rata dan bikin makin percaya diri!</p>
-            
-            <div class="testimonial-media-grid">
-                <img src="https://down-id.img.susercontent.com/file/id-11134103-7rasg-m4sx8y8rrtn703.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)" loading="lazy">
-            </div>
+            <p class="testimonial-text">Suka banget sama long sleeve top ini! Potongannya unik bikin stylish, bahannya juga nyaman dipakai seharian.</p>
             
         </div>
     
-        <div class="testimonial-card">
+        <div class="tiktok-testimonial-card ">
             <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/7c/ae/2d/7cae2d608533ea53a87954bdddaf87db.jpg" alt="Dewi Lestari" class="testimonial-avatar" loading="lazy">
+                <img src="https://ui-avatars.com/api/?name=Citra%20Dewi&background=random&color=fff" alt="Citra Dewi" class="testimonial-avatar" loading="lazy">
                 <div>
-                    <p class="testimonial-name">Dewi Lestari</p>
+                    <p class="testimonial-name">Citra Dewi</p>
                     <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 </div>
             </div>
-            <p class="testimonial-text">Nggak nyesel beli celana korset Joybasic ini! Perut langsung rata dan nyaman banget dipakai seharian, bikin pede.</p>
-            
-            <div class="testimonial-media-grid">
-                <img src="https://down-id.img.susercontent.com/file/id-11134103-7ras8-m4a1186lbkwp82.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)" loading="lazy">
-            </div>
-            
-        </div>
-    
-        <div class="testimonial-card">
-            <div class="testimonial-header">
-                <img src="https://i.pinimg.com/736x/1a/16/35/1a16353cf9889a9074af44f0d038bca3.jpg" alt="Siti Aminah" class="testimonial-avatar" loading="lazy">
-                <div>
-                    <p class="testimonial-name">Siti Aminah</p>
-                    <div class="testimonial-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                </div>
-            </div>
-            <p class="testimonial-text">Celana korset Joybasic ini nyaman banget dipakai seharian, langsung bikin perut rata! Suka banget!</p>
-            
-            <div class="testimonial-media-grid">
-                <img src="https://down-id.img.susercontent.com/file/id-11134103-7r992-lrrgpsd7inax20.webp" alt="Review media" class="testimonial-media-thumb" onclick="openLightbox(this.src)" loading="lazy">
-            </div>
+            <p class="testimonial-text">Top asimetrisnya beneran stylish, aku suka banget desainnya! Bahannya juga adem, nyaman dipakai seharian.</p>
             
         </div>
     </div></div>
 
+        
+
         <div id="order" class="section-block">
              <h2 class="section-title" style="text-align:center;">Formulir Pemesanan</h2>
-             
-    <div id="urgency-timer-container">
-        <h4 id="urgency-headline">Penawaran Spesial Berakhir Dalam</h4>
-        <div id="urgency-timer">
-            <div class="timer-box"><span id="timer-days">00</span><small>Hari</small></div>
-            <div class="timer-box"><span id="timer-hours">00</span><small>Jam</small></div>
-            <div class="timer-box"><span id="timer-minutes">00</span><small>Menit</small></div>
-            <div class="timer-box"><span id="timer-seconds">00</span><small>Detik</small></div>
-        </div>
-        <p id="urgency-end-message" style="display: none;">Sayang sekali, penawaran telah berakhir!</p>
-    </div>
-    
-             <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-1849" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-1849', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
+             <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="long-sleeve-top-asymmetrical" data-product-id="691605b5feadf317dd0d4ff5" id="oo-embed-form-long-sleeve-top-asymmetrical-331" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '691605b5feadf317dd0d4ff5', '691605b5feadf317dd0d4ff6', 'oo-embed-form-long-sleeve-top-asymmetrical-331', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
         </div>
     </div>
 
     <div class="sticky-footer">
-        <a href="#order" class="cta-button">
-            Belanja Sekarang
-            <span class="price-info">Rp 165.000</span>
-        </a>
+        <a href="#order" class="cta-button btn-addcart">Add to Cart</a>
+        <a href="#order" class="cta-button btn-buynow">Beli Sekarang</a>
     </div>
     
     
@@ -246,6 +288,8 @@ Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman bua
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const templateType = "tiktok";
+            
             // Animate on Scroll
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             if ("IntersectionObserver" in window) {
@@ -269,7 +313,7 @@ Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman bua
                 breakpoints: { 320: { slidesPerView: 4 }, 768: { slidesPerView: 5 } }
             });
 
-            window.mainSwiper = new Swiper(".main-swiper", {
+            const mainSwiperOptions = {
                 spaceBetween: 10,
                 navigation: {
                     nextEl: ".swiper-button-next",
@@ -278,6 +322,54 @@ Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman bua
                 thumbs: {
                     swiper: thumbsSwiper && thumbsSwiper.el ? thumbsSwiper : null,
                 },
+            };
+
+            window.mainSwiper = new Swiper(".main-swiper", mainSwiperOptions);
+            
+            // Testimonial Swiper for Shopee template
+            if (templateType === 'shopee') {
+                const testimonialSwiper = new Swiper(".testimonial-swiper-container", {
+                    slidesPerView: 1.2,
+                    spaceBetween: 15,
+                    pagination: { el: ".swiper-pagination", clickable: true },
+                    autoplay: { delay: 5000, disableOnInteraction: false },
+                    breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+                });
+            }
+
+            // Link Swiper to Variant selection (two-way)
+            if (window.mainSwiper) {
+                window.mainSwiper.on('slideChange', function () {
+                    const activeSlide = window.mainSwiper.slides[window.mainSwiper.activeIndex];
+                    if (!activeSlide) return;
+
+                    const imageUrl = activeSlide.dataset.imageSource;
+                    const variantContainers = document.querySelectorAll('.variants-grid');
+                    if (!variantContainers.length) return;
+
+                    variantContainers.forEach(container => {
+                        container.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+                        if (imageUrl) {
+                            const variantElement = container.querySelector(`div[onclick*="${imageUrl}"]`);
+                            if (variantElement) {
+                                variantElement.classList.add('active');
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Accordion Logic
+            document.querySelectorAll('details.faq-item, details.details-accordion-item').forEach((detail) => {
+                detail.addEventListener('toggle', (event) => {
+                    if (detail.open) {
+                        document.querySelectorAll('details.faq-item, details.details-accordion-item').forEach((otherDetail) => {
+                            if (otherDetail !== detail) {
+                                otherDetail.removeAttribute('open');
+                            }
+                        });
+                    }
+                });
             });
         });
 
@@ -292,12 +384,22 @@ Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman bua
                 }
             }
             
-            // Update active state on variant selectors
-            const variantContainer = selectedElement.parentElement;
-            if (variantContainer) {
-                variantContainer.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-                selectedElement.classList.add('active');
-            }
+            // Update active state on all variant selectors on the page
+            document.querySelectorAll('.variants-grid').forEach(container => {
+                 const currentVariant = container.querySelector(`div[onclick*="${imageUrl}"]`);
+                 container.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+                 if(currentVariant) {
+                     currentVariant.classList.add('active');
+                 }
+            });
+        }
+        
+        function changeQuantity(button, amount) {
+            const input = button.parentElement.querySelector('input');
+            let currentValue = parseInt(input.value, 10);
+            currentValue = isNaN(currentValue) ? 1 : currentValue;
+            const newValue = Math.max(1, currentValue + amount);
+            input.value = newValue;
         }
 
         
@@ -328,8 +430,8 @@ Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman bua
         
         // Social Proof Logic
         const socialProofData = {
-            names: "Sari, Dewi, Maya, Putri, Rina, Indira, Kartika, Lestari, Permata, Vina, Dina, Anisa, Fitri, Novi, Ratna".split(',').map(s => s.trim()), cities: "Jakarta, Surabaya, Bandung, Medan, Bekasi, Tangerang, Depok, Semarang, Palembang, Makassar, Yogyakarta, Malang, Bogor, Batam, Denpasar".split(',').map(s => s.trim()),
-            productName: "Joybasic Women's Celana Korset", interval: 8000, duration: 5000
+            names: "Ani, Budi, Caca, Dewi, Eka".split(',').map(s => s.trim()), cities: "Jakarta, Bandung, Surabaya, Medan, Makassar".split(',').map(s => s.trim()),
+            productName: "Long Sleeve Top Asymmetrical", interval: 8000, duration: 5000
         };
         const popup = document.getElementById('social-proof-popup');
         if (popup) {
@@ -363,8 +465,8 @@ Bahan nyaman, stretch, adem, lembut, gak bikin gerah/gatal, halus dan nyaman bua
             const hoursEl = document.getElementById('timer-hours');
             const minutesEl = document.getElementById('timer-minutes'); 
             const secondsEl = document.getElementById('timer-seconds');
-            const durationInMillis = ((24 * 3600) + (0 * 60) + 0) * 1000;
-            const storageKey = 'nexcoTimerEndTime_Joybasic Women's Celana Korset';
+            const durationInMillis = ((2 * 3600) + (30 * 60) + 0) * 1000;
+            const storageKey = 'nexcoTimerEndTime_Long Sleeve Top Asymmetrical';
             let endTime = localStorage.getItem(storageKey);
             if (!endTime || new Date().getTime() > parseInt(endTime)) {
                 endTime = String(new Date().getTime() + durationInMillis);
